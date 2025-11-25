@@ -14,17 +14,15 @@
         <button>공유</button>
     </header>
     <!-- === main ===================== -->
-    <div>
-        <h1>메뉴 등록</h1>
-        <div>
-            <div>메뉴 입력 폼</div>
-            <!-- 메뉴 -->
+    <main>
+        <section>
+            <h1>메뉴 등록</h1>
             <form id="menu-form" method="post" action="list.html">
                 <div>
                     메뉴 이미지 <input type="file">
                 </div>
                 <div>
-                    한글명 *
+                    한글명 <span>*</span>
                     <input type="text" name="kor-name" required placeholder="한글명을 입력하세요." minlength="2" maxlength="8"
                         autofocus>
                 </div>
@@ -32,53 +30,56 @@
                     영문명 <input type="text" name="eng-name" placeholder="영문명을 입력하세요.">
                 </div>
                 <div>
-                    카테고리 *
+                    카테고리 <span>*</span>
                     <select name="category-id" required>
                         <option value="">선택해주세요.</option>
                         <option value="1">커피</option>
                         <option value="2">논커피</option>
-                        <option value="3">쿠키</option>
-                        <option value="4">케이크</option>
+                        <option value="3">티/차</option>
+                        <option value="4">에이드</option>
+                        <option value="5">주스/스무디</option>
+                        <option value="6">아이스크림</option>
+                        <option value="7">베이커리</option>
                     </select>
                 </div>
                 <div>
-                    가격*
+                    가격 <span>*</span>
                     <input type="number" name="price" required placeholder="가격을 입력하세요." min="100" max="10000">
                 </div>
-
+    
                 <div>
                     설명
                     <textarea cols="60" rows="10" name="description" placeholder="메뉴 설명을 입력하세요."></textarea>
                 </div>
-
+    
                 <div>
                     <input type="checkbox" name="is-sellable">
                     판매가능
                 </div>
-
+    
                 <div>
                     <input type="checkbox" name="is-hot">
                     Hot
                 </div>
-
+    
                 <div>
                     <input type="checkbox">
                     Iced
                 </div>
+                <div>
+                    <button>저장</button>
+                    <button type="button" onclick="location.href='list.html'">취소</button>
+                </div>
             </form>
-        </div>
-        <div>
-            <button form="menu-form">저장</button>
-            <button onclick="location.href='list.html'">취소</button>
-        </div>
-    </div>
+        </section>
+    </main>
     <!-- === nav ==================== -->
     <nav>
         <h1>바로가기 메뉴</h1>
         <ul>
-            <li><a href="../index.html">대시보드</a></li>
-            <li><a href="list.html">커피목록</a></li>
-            <li><a href="create.html">메뉴추가</a></li>
+            <li><a href="/admin/index.html">대시보드</a></li>
+            <li><a href="/admin/menu/list.html">메뉴목록</a></li>
+            <li><a href="/admin/menu/create.html">메뉴추가</a></li>
         </ul>
     </nav>
     <!-- === footer ==================== -->
