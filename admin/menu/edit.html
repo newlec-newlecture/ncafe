@@ -19,43 +19,36 @@
     <main>
         <section>
             <h1>메뉴 수정</h1>
-            <div>
-                <div>메뉴 수정 폼</div>
-                <!-- 메뉴 -->
-                <form id="menu-form" method="post" action="create.php">
-                    <div>
-                        메뉴 이미지
-                        <ul>
-                            <li>
-                                <img src="https://www.figma.com/api/mcp/asset/f75ed383-29c9-460b-97c1-191e70df5759"
-                                    alt="따뜻한 아메리카노">
-                            </li>
-                            <li>
-                                <img src="https://www.figma.com/api/mcp/asset/73e08898-491b-41b6-9dde-b7a9e80cb368"
-                                    alt="아이스 아메리카노">
-                            </li>
-                            <li>이미지를 추가하세요<input type="file"></li>
-                        </ul>
-                    </div>
-                    <div>
+            <form id="menu-form" method="post" action="create.php">
+                <section>
+                    <h1>메뉴 이미지</h1>
+                    <ul>
+                        <li>
+                            <img src="https://www.figma.com/api/mcp/asset/f75ed383-29c9-460b-97c1-191e70df5759"
+                                alt="따뜻한 아메리카노">
+                        </li>
+                        <li>
+                            <img src="https://www.figma.com/api/mcp/asset/73e08898-491b-41b6-9dde-b7a9e80cb368"
+                                alt="아이스 아메리카노">
+                        </li>
+                        <li><label>이미지를 추가하세요<input type="file"></label></li>
+                    </ul>
+                </section>
+                <div>
+                    <label>
                         한글명 <span>*</span>
-                        <input type="text" name="kor-name"
-                        required placeholder="한글명을 입력하세요."
-                        minlength="2" maxlength="8"
-                        autocomplete="off"
-                        title="예)아메리카노"
-                        pattern="^[가-힣]+$"
-                        value="아메리카노"
-                        autofocus>
-                    </div>
-                    <div>
-                        영문명 <input type="text" name="eng-name"
-                        placeholder="영문명을 입력하세요."
-                        pattern="^[a-zA-Z]+$"
-                        value="Americano"
-                        title="예)Americano">
-                    </div>
-                    <div>
+                        <input type="text" name="kor-name" required placeholder="한글명을 입력하세요." minlength="2"
+                            maxlength="8" autocomplete="off" title="예)아메리카노" pattern="^[가-힣]+$" value="아메리카노" autofocus>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        영문명 <input type="text" name="eng-name" placeholder="영문명을 입력하세요." pattern="^[a-zA-Z]+$"
+                            value="Americano" title="예)Americano">
+                    </label>
+                </div>
+                <div>
+                    <label>
                         카테고리 <span>*</span>
                         <select name="category-id" required>
                             <option value="">선택해주세요.</option>
@@ -67,38 +60,45 @@
                             <option value="6">아이스크림</option>
                             <option value="7">베이커리</option>
                         </select>
-                    </div>
-                    <div>
+                    </label>
+                </div>
+                <div>
+                    <label>
                         가격 <span>*</span>
-                        <input type="number" name="price"
-                        required placeholder="가격을 입력하세요."
-                        min="100" max="10000"
-                        value="4500">
-                    </div>
-                    <div>
+                        <input type="number" name="price" required placeholder="가격을 입력하세요." min="100" max="10000"
+                            value="4500">
+                    </label>
+                </div>
+                <div>
+                    <label>
                         설명
                         <textarea cols="60" rows="10" name="description"
-                        placeholder="메뉴 설명을 입력하세요."
-                        >깊고 진한 에스프레소에 뜨거운 물을 더한 클래식 커피</textarea>
-                    </div>
-                    <div>
+                            placeholder="메뉴 설명을 입력하세요.">깊고 진한 에스프레소에 뜨거운 물을 더한 클래식 커피</textarea>
+                    </label>
+                </div>
+                <div>
+                    <label>
                         <input type="checkbox" name="is-sellable" checked>
                         판매가능
-                    </div>
-                    <div>
+                    </label>
+                </div>
+                <div>
+                    <label>
                         <input type="checkbox" name="is-hot" checked>
                         Hot
-                    </div>
-                    <div>
+                    </label>
+                </div>
+                <div>
+                    <label>
                         <input type="checkbox" checked>
                         Iced
-                    </div>
-                    <div>
-                        <button>수정된 내용 저장</button>
-                        <button type="button" onclick="location.href='detail.html'">취소</button>
-                    </div>
-                </form>
-            </div>
+                    </label>
+                </div>
+                <div>
+                    <button>수정된 내용 저장</button>
+                    <button type="button" onclick="location.href='detail.html'">취소</button>
+                </div>
+            </form>
         </section>
     </main>
     <nav>
