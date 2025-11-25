@@ -8,8 +8,8 @@
 <body>   
   <!-- === header ===================== -->
   <header>
-    <h1><a href="../../index.html">NCafe</a></h1>   
-    <div>공유</div>
+    <h1><a href="/index.html">NCafe</a></h1>   
+    <button>공유</button>
   </header>
   <!-- === main ===================== -->
   <main>
@@ -34,21 +34,30 @@
           <!-- ---- 메뉴 목록 ------------------------- -->
           <section>
               <h1>메뉴 목록</h1>
-              <div>
+              <ul>
                   <!-- 메뉴 -->
-                  <div>
-                      <div>이미지</div>
-                      <div>아메리카노</div>                    
-                      <div>230 ML</div>
-                      <div>4,500원</div>
-                      <div>수정버튼</div>                    
-                  </div>
+                <li>
+                  <article>
+                    <header>
+                      <h1>아메리카노</h1>
+                    </header>
+                    <div>이미지</div>
+                    <div>230 ML</div>
+                    <div>4,500원</div>
+                    <button type="button">수정</button>
+                  </article>
+                </li>
                   <!-- 메뉴 -->
-                  <div>
-                      
-                  </div>
-                  <div>메뉴</div>
-              </div>
+                <li>
+                  <article>
+                    <header>
+                      <h2>메뉴 이름</h2>
+                    </header>
+                    <p>메뉴 설명</p>
+                    <button type="button">수정</button>
+                  </article>
+                </li>
+              </ul>
           </section>
       </div>
     </section>
@@ -56,9 +65,9 @@
   <aside>
     <h1>바로가기 메뉴</h1>
     <ul>
-      <li>대시보드</li>
-      <li>커피목록</li>
-      <li>메뉴추가</li>
+      <li><a href="/admin/index.html">대시보드</a></li>
+      <li><a href="/admin/menu/list.html">커피목록</a></li>
+      <li><a href="/admin/menu/create.html">메뉴추가</a></li>
     </ul>
   </aside>
   <!-- === footer ==================== -->
