@@ -23,8 +23,12 @@
                 </div>
                 <div>
                     한글명 <span>*</span>
-                    <input type="text" name="kor-name" required placeholder="한글명을 입력하세요." minlength="2" maxlength="8"
-                        autofocus>
+                    <input type="text" name="kor-name"
+                    required placeholder="한글명을 입력하세요."
+                    minlength="2" maxlength="8"
+                    autocomplete="off"
+                    title="예)아메리카노"
+                    autofocus>
                 </div>
                 <div>
                     영문명 <input type="text" name="eng-name" placeholder="영문명을 입력하세요.">
@@ -44,12 +48,15 @@
                 </div>
                 <div>
                     가격 <span>*</span>
-                    <input type="number" name="price" required placeholder="가격을 입력하세요." min="100" max="10000">
+                    <input type="number" name="price"
+                    required placeholder="가격을 입력하세요."
+                    min="100" max="10000">
                 </div>
     
                 <div>
                     설명
-                    <textarea cols="60" rows="10" name="description" placeholder="메뉴 설명을 입력하세요."></textarea>
+                    <textarea cols="60" rows="10" name="description"
+                    placeholder="메뉴 설명을 입력하세요."></textarea>
                 </div>
     
                 <div>
