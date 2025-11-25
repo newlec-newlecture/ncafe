@@ -1,11 +1,449 @@
-<<<<<<< HEAD
-tqtqt
-=======
-테스트 문자열
-호호호
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --color-bg: #f9f7f5;
+            --color-panel: #ffffff;
+            --color-main: #b8672e;
+            --color-accent: #d92626;
+            --color-text: #494949;
+            --color-sub: #9f8b7c;
+            --color-muted: #988272;
+            --color-chip-bg: #ebe6e0;
+            --shadow-soft: 0 12px 32px rgba(209, 179, 153, 0.35);
+        }
 
-혜연님 파이팅!!
-규원님 감사합니다.
-황서범님 ~~ ㅋㅋ
-한 번 더 커밋
-더 한 번
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header,
+        main,
+        aside {
+            width: 100%;
+            max-width: 428px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            font-weight: 600;
+        }
+
+        header h1 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 22px;
+            color: var(--color-main);
+            margin: 0;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 24px;
+        }
+
+        .share-btn {
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .share-btn svg {
+            width: 26px;
+            height: 26px;
+            stroke: #4c4c4c;
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            padding: 0 24px 140px;
+        }
+
+        .detail-card {
+            background: var(--color-bg);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding-top: 8px;
+        }
+
+        .detail-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+        }
+
+        .detail-topbar a {
+            width: 40px;
+            height: 40px;
+            border-radius: 0;
+            display: grid;
+            place-items: center;
+            text-decoration: none;
+            color: var(--color-text);
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .detail-topbar h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+            color: var(--color-text);
+        }
+
+        .detail-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .detail-images img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .detail-title h3 {
+            margin: 0;
+            font-size: 22px;
+            color: var(--color-text);
+        }
+
+        .detail-title p {
+            margin: 4px 0 0;
+            color: var(--color-muted);
+            font-size: 14px;
+        }
+
+        .detail-tags {
+            display: flex;
+            gap: 8px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 4px 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .chip--category {
+            background: var(--color-chip-bg);
+            color: var(--color-text);
+        }
+
+        .chip--status {
+            background: var(--color-main);
+            color: #fff;
+        }
+
+        .detail-price,
+        .detail-description,
+        .detail-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .detail-price {
+            gap: 0px;
+        }
+
+        .detail-label {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-sub);
+            margin: 0;
+        }
+
+        .price-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--color-main);
+            margin: 0;
+        }
+
+        .detail-description p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .detail-meta p {
+            margin: 0;
+            font-size: 12px;
+            color: #7c7c7c;
+        }
+
+        .detail-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 8px;
+            padding: 14px 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--color-main);
+        }
+
+        .btn-danger {
+            background: var(--color-accent);
+        }
+
+        aside {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: none;
+            padding: 0;
+            background: transparent;
+        }
+
+        .bottom-toolbar {
+            width: 100%;
+            background: #fff;
+            border-radius: 0;
+            padding: 12px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f1ece6;
+        }
+
+        .toolbar-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .toolbar-btn svg {
+            width: 28px;
+            height: 28px;
+            stroke: #6f635a;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .toolbar-btn--active svg {
+            stroke: var(--color-main);
+            fill: var(--color-main);
+        }
+
+        .toolbar-btn--outlined svg {
+            fill: none;
+        }
+
+        footer {
+            width: 100%;
+            max-width: none;
+            background: var(--color-panel);
+            padding: 32px 24px 80px;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        footer section + section {
+            margin-top: 16px;
+        }
+
+        dl {
+            margin: 12px 0 0;
+        }
+
+        dt {
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        dd {
+            margin: 4px 0 12px;
+            color: #7c7c7c;
+        }
+    </style>
+</head>
+<body>
+    <!-- ==== header =================================================== -->
+    <header>
+        <h1>
+            <svg class="logo-icon" viewBox="0 0 48 32" fill="none" aria-hidden="true">
+                <path d="M8 26h24c4 0 6-3 6-7V9H8v17Z" stroke="#b8672e" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M32 13h6c3 0 6 2 6 5s-3 5-6 5h-2" stroke="#b8672e" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M12 9c0-3 2-5 4-5s4 2 4 5" stroke="#b8672e" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M20 9c0-3 2-5 4-5s4 2 4 5" stroke="#b8672e" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            <span>NCafe</span>
+        </h1>
+        <button type="button" class="share-btn" aria-label="공유">
+            <svg viewBox="0 0 24 24" role="presentation">
+                <circle cx="6" cy="12" r="2"></circle>
+                <circle cx="16" cy="7" r="2"></circle>
+                <circle cx="16" cy="17" r="2"></circle>
+                <path d="M8.2 11l5.6-3"></path>
+                <path d="M8.2 13l5.6 3"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- ==== main =================================================== -->
+    <main>
+        <section class="detail-card" aria-labelledby="detail-title">
+            <div class="detail-topbar">
+                <a href="list.html" aria-label="뒤로가기">
+                    <svg viewBox="0 0 24 24" role="presentation" width="22" height="22" fill="none" stroke="#191919" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 6l-6 6 6 6"></path>
+                    </svg>
+                </a>
+                <h2 id="detail-title">등록된 메뉴</h2>
+                <div aria-hidden="true" style="width:32px;height:32px;"></div>
+            </div>
+
+            <section class="detail-images" aria-label="메뉴 이미지">
+                <img src="https://www.figma.com/api/mcp/asset/fe755890-7633-47ad-aeb2-2872cef09748" alt="따뜻한 아메리카노">
+                <img src="https://www.figma.com/api/mcp/asset/a7e16d2d-51ce-45ec-a53c-7ddcd9e24618" alt="아이스 아메리카노">
+            </section>
+
+            <section class="detail-title" aria-label="메뉴 제목">
+                <h3>아메리카노</h3>
+                <p>Americano</p>
+            </section>
+
+            <section class="detail-tags" aria-label="메뉴 상태">
+                <span class="chip chip--category">커피</span>
+                <span class="chip chip--status">판매중</span>
+            </section>
+
+            <section class="detail-price" aria-label="메뉴 가격">
+                <p class="detail-label">가격</p>
+                <p class="price-value">4,500원</p>
+            </section>
+
+            <section class="detail-description" aria-label="메뉴 설명">
+                <p class="detail-label">설명</p>
+                <p>깊고 진한 에스프레소에 뜨거운 물을 더한 클래식 커피</p>
+            </section>
+
+            <section class="detail-meta" aria-label="등록 정보">
+                <p>등록일: 2025. 11. 18.</p>
+                <p>수정일: 2025. 11. 18.</p>
+            </section>
+
+            <div class="detail-actions">
+                <button type="button" class="btn btn-primary">수정</button>
+                <button type="button" class="btn btn-danger">삭제</button>
+            </div>
+        </section>
+    </main>
+
+    <aside>
+        <nav class="bottom-toolbar" aria-label="바로가기">
+            <button class="toolbar-btn" type="button" aria-label="대시보드">
+                <svg viewBox="0 0 24 24" role="presentation">
+                    <rect x="5" y="5" width="4" height="4" rx="1"></rect>
+                    <rect x="5" y="15" width="4" height="4" rx="1"></rect>
+                    <rect x="15" y="5" width="4" height="4" rx="1"></rect>
+                    <rect x="15" y="15" width="4" height="4" rx="1"></rect>
+                </svg>
+            </button>
+            <button class="toolbar-btn toolbar-btn--active" type="button" aria-label="커피 목록">
+                <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M6 10h12v2a6 6 0 0 1-6 6 6 6 0 0 1-6-6v-2z"></path>
+                    <path d="M6 10c0-3 2-5 6-5s6 2 6 5"></path>
+                    <path d="M18 12h2a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2h-2"></path>
+                </svg>
+            </button>
+            <button class="toolbar-btn toolbar-btn--outlined" type="button" aria-label="메뉴 추가">
+                <svg viewBox="0 0 24 24" role="presentation">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 9v6"></path>
+                    <path d="M9 12h6"></path>
+                </svg>
+            </button>
+        </nav>
+    </aside>
+
+    <!-- === footer ==================================================== -->
+    <footer>
+        <section>
+            <h1>사이트정보</h1>
+            <div>
+                <section>
+                    <h1>회사정보</h1>
+                    <dl>
+                        <dt>상호</dt>
+                        <dd>뉴카페</dd>
+                        <dt>사업자등록번호</dt>
+                        <dd>111-222222-11</dd>
+                        <dt>대표</dt>
+                        <dd>뉴렉처</dd>
+                    </dl>
+                </section>
+                <section>
+                    <h1>연락처</h1>
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>서울시 마포구 백범로 ..</dd>
+                        <dt>전화</dt>
+                        <dd>02-111-333</dd>
+                        <dt>이메일</dt>
+                        <dd>help@ncafe.com</dd>
+                    </dl>
+                </section>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
+
