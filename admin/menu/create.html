@@ -17,23 +17,42 @@
     <div>
         <div>메뉴 입력 폼</div>
         <!-- 메뉴 -->
-        <form>
+        <form id="menu-form" method="post" action="create.php">
             <div>
                 이미지 <input type="file">                
             </div>
             <div>
-                한글명 <input type="text">
+                한글명* <input type="text" name="kor-name" 
+                required placeholder="힌글명으로 2~8 이내로 입력해주세요." minlength="2"  maxlength="8"
+                autocomplete="off"
+                autofocus>
             </div>
             <div>
-                영문명 <input type="text">
+                영문명 <input type="text" name="eng-name">
+            </div>
+            <div>
+                전화번호 <input type="text" name="phone" 
+                required placeholder="대시(-) 포함해서 입력해주세요." 
+                pattern="010-\d{4}-\d{4}" title="예)010-1234-1234">
+            </div>
+            <div>
+                가격* <input type="text" name="price"
+                required placeholder="가격을 입력해주세요" min="100" max="10000">
             </div>
             <div>
                 카테고리
-                <select>
-                    <option>커피</option>
-                    <option>쿠키</option>
-                    <option>케이크</option>     
+                <select name="category-id" required>
+                    <option value="">선택해주세요.</option>
+                    <option value="1">커피</option>
+                    <option value="2">쿠키</option>
+                    <option value="3">케이크</option>     
                 </select>
+                <input type="text" name="category-id" required>
+                <datalist id="category-list">
+                    <option value="커피">커피</option>
+                    <option value="쿠키">쿠키</option>
+                    <option value="케이크">케이크</option>
+                </datalist>
             </div>
 
 
@@ -46,24 +65,20 @@
             </div>
 
             <div>
-                <input type="checkbox">
+                <input type="checkbox" name="us-sellable">
                 판매가능
             </div>
 
             <div>
-                <input type="checkbox">
+                <input type="checkbox"name="is-hot">
                 Hot
             </div>
 
             <div>
-                <input type="checkbox">
+                <input type="checkbox" name="is-iced">
                 Iced
             </div>
 
-            <div>                
-                <button>저장</button>                
-                <button>취소</button>
-            </div>
 
             <!-- 메뉴.이미지
             메뉴.한글명
@@ -77,6 +92,10 @@
             메뉴.저장버튼
             메뉴.취소버튼 -->
         </form>
+    </div>
+    <div>                
+        <button form="menu-form">저장</button>                
+        <button>취소</button>
     </div>
   </div>
   <!-- === footer ==================== -->
