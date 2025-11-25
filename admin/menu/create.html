@@ -28,10 +28,14 @@
                     minlength="2" maxlength="8"
                     autocomplete="off"
                     title="예)아메리카노"
+                    pattern="^[가-힣]+$"
                     autofocus>
                 </div>
                 <div>
-                    영문명 <input type="text" name="eng-name" placeholder="영문명을 입력하세요.">
+                    영문명 <input type="text" name="eng-name"
+                    placeholder="영문명을 입력하세요."
+                    pattern="^[a-zA-Z]+$"
+                    title="예)Americano">
                 </div>
                 <div>
                     카테고리 <span>*</span>
