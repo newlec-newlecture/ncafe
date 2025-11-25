@@ -1,112 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
-  <!-- === header ===================== -->
-  <div>
-    <div>NCafe</div>
-    <div>공유</div>
-  </div>
-  <!-- === main ===================== -->
-  <div>
-    <div>메뉴 등록</div>
+    <!-- === header ===================== -->
+    <header>
+        <h1><a href="../index.html">NCafe</a></h1>
+        <div>
+            <button>공유</button>
+        </div>
+    </header>
+    <!-- === main ===================== -->
     <div>
-        <div>메뉴 입력 폼</div>
-        <!-- 메뉴 -->
-        <form id="menu-form" method="post" action="create.php">
-            <div>
-                이미지 <input type="file">              
-            </div>
-            <div>
-                한글명* <input type="text" name="kor-name"
-                required placeholder="한글명으로 2~8 이내로 입력해주세요." 
-                minlength="2" maxlength="8"
-                autocomplete="off"
-                autofocus
-                >
-            </div>
-            <div>
-                영문명 <input type="text" name="eng-name">
-            </div>
-            <div>
-                전화번호 <input type="text" name="phone"
-                required placeholder="대시(-)를 포함해서 입력해주세요." 
-                pattern="010-\d{4}-\d{4}" title="예)010-1111-2222">
-            </div>
-            <div>
-                가격* <input type="number" name="price"
-                required placeholder="가격을 입력해주세요." min="100" max="10000">
-            </div>
-            <div>
-                카테고리
-                <select name="category-id" required>
-                    <option value="">선택해주세요.</option>
-                    <option value="1">커피</option>
-                    <option value="2">쿠키</option>
-                    <option value="3">케이크</option>
-                </select>
-                <input type="text" name="category-id" 
-                    required list="category-list">
-                <datalist id="category-list">
-                    <option value="커피">커피</option>
-                    <option value="쿠키">쿠키</option>
-                    <option value="케이크">케이크</option>
-                </datalist>
-            </div>
+        <h1>메뉴 등록</h1>
+        <div>
+            <div>메뉴 입력 폼</div>
+            <!-- 메뉴 -->
+            <form id="menu-form" method="post" action="list.html">
+                <div>
+                    메뉴 이미지 <input type="file">
+                </div>
+                <div>
+                    한글명 *
+                    <input type="text" name="kor-name" required placeholder="한글명을 입력하세요." minlength="2"
+                        maxlength="8" autofocus>
+                </div>
+                <div>
+                    영문명 <input type="text" name="eng-name" placeholder="영문명을 입력하세요.">
+                </div>
+                <div>
+                    카테고리 *
+                    <select name="category-id" required>
+                        <option value="">선택해주세요.</option>
+                        <option value="1">커피</option>
+                        <option value="2">논커피</option>
+                        <option value="3">쿠키</option>
+                        <option value="4">케이크</option>
+                    </select>
+                    <!-- <input type="text" name="category-id" required list="category-list">
+                    <datalist id="category-list">
+                        <option value="커피">커피</option>
+                        <option value="쿠키">쿠키</option>
+                        <option value="케이크">케이크</option>
+                    </datalist> -->
+                </div>
+                <div>
+                    가격* 
+                    <input type="number" name="price" required placeholder="가격을 입력하세요." min="100" max="10000">
+                </div>
 
+                <div>
+                    설명
+                    <textarea cols="60" rows="10" name="description" placeholder="메뉴 설명을 입력하세요."></textarea>
+                </div>
 
-            <div>
-                설명
-                <textarea cols="60" rows="10" name="description">
-안녕하세요
-또 만났군요요
-                </textarea>
-            </div>
+                <div>
+                    <input type="checkbox" name="is-sellable">
+                    판매가능
+                </div>
 
-            <div>
-                <input type="checkbox" name="is-sellable">
-                판매가능
-            </div>
+                <div>
+                    <input type="checkbox" name="is-hot">
+                    Hot
+                </div>
 
-            <div>
-                <input type="checkbox" name="is-hot">
-                Hot
-            </div>
-
-            <div>
-                <input type="checkbox">
-                Iced
-            </div>
-
-            
-
-            <!-- 메뉴.이미지
-            메뉴.한글명
-            메뉴.영문명
-            메뉴.카테고리
-            메뉴.가격
-            메뉴.설명
-            메뉴.판매가능옵션
-            메뉴.핫옵션
-            메뉴.아이스옵션
-            메뉴.저장버튼
-            메뉴.취소버튼 -->
-        </form>
+                <div>
+                    <input type="checkbox">
+                    Iced
+                </div>
+            </form>
+        </div>
+        <div>
+            <button form="menu-form">저장</button>
+            <button onclick="location.href='list.html'">취소</button>
+        </div>
     </div>
-    <div>             
-        <button form="menu-form">저장</button>                
-        <button>취소</button>
-    </div>
-  </div>
-  <!-- === footer ==================== -->
-  <div>
-    <div>대시보드</div>
-    <div>커피목록</div>
-    <div>메뉴추가</div>
-  </div>
+    <!-- === nav ==================== -->
+    <nav>
+        <h1>바로가기 메뉴</h1>
+        <ul>
+            <li><a href="../index.html">대시보드</a></li>
+            <li><a href="list.html">커피목록</a></li>
+            <li><a href="create.html">메뉴추가</a></li>
+        </ul>
+    </nav>
+    <!-- === footer ==================== -->
+    <footer>
+        <section>
+            <h1>사이트 정보</h1>
+            <div>
+                <section>
+                    <h1>회사정보</h1>
+                    <dl>
+                        <dt>상호</dt>
+                        <dd>뉴카페</dd>
+                        <dt>업자등록번호</dt>
+                        <dd>111-222222-11</dd>
+                        <dt>대표</dt>
+                        <dd>뉴렉처</dd>
+                    </dl>
+                </section>
+                <section>
+                    <h1>연락처</h1>
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>서울시 마포구 백범로...</dd>
+                        <dt>전화</dt>
+                        <dd>02-111-333</dd>
+                        <dt>이메일</dt>
+                        <dd>help@ncafe.com</dd>
+                    </dl>
+                </section>
+            </div>
+        </section>
+    </footer>
 </body>
+
 </html>
