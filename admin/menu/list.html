@@ -8,7 +8,7 @@
 <body>   
   <!-- === header ===================== -->
   <header>
-    <h1><a href="../../index.html">NCafe</a></h1>   
+    <h1>NCafe</h1>   
     <div>공유</div>
   </header>
   <!-- === main ===================== -->
@@ -24,12 +24,15 @@
           <!-- ---- 카테고리 목록 ------------------------ -->
           <section>
             <h1>카테고리 목록</h1>
-            <ul>
-              <li>커피</li>
-              <li>쿠키</li>
-              <li>논커피</li>
-              <li>샌드위치</li>
-            </ul>
+            <select name="category-id">
+              <option value="1">커피</option>
+              <option value="2">논커피</option>
+              <option value="3">티/차</option>
+              <option value="4">에이드</option>
+              <option value="5">주스/스무디</option>
+              <option value="6">아이스크림</option>
+              <option value="7">베이커리</option>
+            </select>
           </section>
           <!-- ---- 메뉴 목록 ------------------------- -->
           <section>
@@ -41,26 +44,21 @@
                       <div>아메리카노</div>                    
                       <div>230 ML</div>
                       <div>4,500원</div>
-                      <div>수정버튼</div>                    
+                      <div><a href="./detail.html">수정버튼</a></div>                    
                   </div>
                   <!-- 메뉴 -->
-                  <div>
-                      
-                  </div>
-                  <div>메뉴</div>
-              </div>
           </section>
       </div>
     </section>
   </main>
-  <aside>
+  <nav>
     <h1>바로가기 메뉴</h1>
     <ul>
-      <li>대시보드</li>
-      <li>커피목록</li>
-      <li>메뉴추가</li>
+      <li><a href="../index.html">대시보드</a></li>
+      <li><a href="./list.html">커피목록</a></li>
+      <li><a href="./create.html"></a>메뉴추가</a></li>
     </ul>
-  </aside>
+  </nav>
   <!-- === footer ==================== -->
   <footer>
     <section>
