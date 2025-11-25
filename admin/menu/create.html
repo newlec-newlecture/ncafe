@@ -22,49 +22,61 @@
                 <!-- 메뉴 -->
                 <form id="menu-form" method="post" action="create.php">
                     <div>
-                        이미지 <input type="file">
+                        이미지 <input type="file" multiple>
                     </div>
                     <div>
-                        한글명* <input type="text" name="kor-name" required placeholder="한글명으로 2~8 이내로 입력해주세요."
-                            minlength="2" maxlength="8" autocomplete="off" autofocus>
+                        <label>
+                            한글명* <input type="text" name="kor-name" required placeholder="한글명으로 2~8 이내로 입력해주세요."
+                                minlength="2" maxlength="8" autocomplete="off" autofocus>
+                        </label>
                     </div>
                     <div>
-                        영문명 <input type="text" name="eng-name" required placeholder="영문명을 입력해주세요.">
+                        <label>
+                            영문명 <input type="text" name="eng-name" required placeholder="영문명을 입력해주세요.">
+                        </label>
                     </div>
                     <div>
-                        가격* <input type="number" name="price" required placeholder="가격을 입력해주세요." min="100">
+                        <label>
+                            가격* <input type="number" name="price" required placeholder="가격을 입력해주세요." min="100">
+                        </label>
                     </div>
                     <div>
-                        카테고리*
-                        <select name="category-id" required>
-                            <option value="">선택해주세요.</option>
-                            <option value="1">커피</option>
-                            <option value="2">쿠키</option>
-                            <option value="3">케이크</option>
-                        </select>
-                        <input type="text" name="category-id" required list="category-list">
-                        <datalist id="category-list">
-                            <option value="커피">커피</option>
-                            <option value="쿠키">쿠키</option>
-                            <option value="케이크">케이크</option>
-                        </datalist>
+                        <label>
+                            카테고리*
+                            <select name="category-id" required>
+                                <option value="">선택해주세요.</option>
+                                <option value="1">커피</option>
+                                <option value="2">쿠키</option>
+                                <option value="3">케이크</option>
+                            </select>
+                            <input type="text" name="category-id" required list="category-list">
+                            <datalist id="category-list">
+                                <option value="커피">커피</option>
+                                <option value="쿠키">쿠키</option>
+                                <option value="케이크">케이크</option>
+                            </datalist>
+                        </label>
                     </div>
                     <div>
-                        설명
-                        <textarea cols="60" rows="10" name="description" required placeholder="설명을 입력해주세요."
-                            maxlength="200"></textarea>
+                        <label>
+                            설명
+                            <textarea cols="60" rows="10" name="description" required placeholder="설명을 입력해주세요."
+                                maxlength="200"></textarea>
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="is-sellable">
-                        판매가능
-                    </div>
-                    <div>
-                        <input type="checkbox" name="is-hot">
-                        Hot
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        Iced
+                        <label>
+                            판매가능
+                            <input type="checkbox" name="is-sellable">
+                        </label>
+                        <label>
+                            Hot
+                            <input type="checkbox" name="is-hot">
+                        </label>
+                        <label>
+                            Iced
+                            <input type="checkbox">
+                        </label>
                     </div>
                 </form>
         </section>
