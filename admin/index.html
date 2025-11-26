@@ -5,46 +5,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+
+    .chart-section>.title+div>section.first-child~section{
+      color: blue;
+      border: 1px dotted blue;
+    }
+  </style>
 </head>
 
 <body>
   <!-- === header ===================== -->
-  <div>
-    <h1>NCafe</h1>
+  <div class="menu-name menu-price menu-date">
+    <h1 class="aa" lang="zh-CN">NCafe</h1>
     <div>공유</div>
   </div>
   <!-- === main ===================== -->
   <main>
-    <section>
-      <h1>차트</h1>
-      <section>
-        <div>
-          <h1>주간 매출 현황</h1>
-          <!-- === 주간 매출 차트 ===================== -->
-          <div>
-            <form id="chart-form" action="">
-              <div>차트 데이터</div>
-              <!-- 요일 레이블 -->
-              <ul>
-                <li>Mon</li>
-                <li>Tue</li>
-                <li>Wed</li>
-                <li>Thr</li>
-                <li>Fri</li>
-                <li>Sat</li>
-                <li>Sun</li>
-              </ul>
-          </div>
-          </form>
-        </div>
-        <div>
-          <h1>오늘의 주문</h1>
+    <section class="chart-section">
+      <h1 class="title">차트</h1>      
+      <div class="chart-data">
+        <section id="week-chart" class="first-child">
+          <h1 class="title">차트 데이터</h1>
+          <!-- 요일 레이블 -->
+          <ul>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thr</li>
+            <li>Fri</li>
+            <li>Sat</li>
+            <li>Sun</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1 class="title">오늘의 주문</h1>
           <!-- === 오늘의 주문 차트 =============== -->
-          <form id="chart-form" action="">
-            <div>차트 데이터</div>
-          </form>
-        </div>
-      </section>
+          
+          <div>차트 데이터</div>
+          
+        </section>
+
+        <section>
+          <h1 class="title">오늘의 판매량</h1>
+          <div>오늘의 판매량 차트 데이터</div>
+        </section>
+      </div>   
     </section>
   </main>
   <nav>
@@ -56,7 +63,7 @@
     </ul>
   </nav>
   <!-- === footer ==================== -->
-  <footer>
+  <footer id="footer">
     <section>
       <h1>사이트 정보</h1>
       <div>
