@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,63 +9,250 @@
 </head>
 
 <body>
-  <!-- === header ===================== -->
+  <!-- header s -->
   <header>
-    <h1>NCafe</h1>
-    <div>공유</div>
-  </header>
-  <!-- === main ===================== -->
-  <main>
-    <section>
-      <h1>등록된 메뉴</h1>
-      <div>
-        <!-- --- 메뉴 검색 폼 ---------------- -->
-        <section>
-          <h1>메뉴 검색폼</h1>
-          <div>메뉴검색</div>
-        </section>
-        <!-- ---- 카테고리 목록 ------------------------ -->
-        <section>
-          <h1>카테고리 목록</h1>
-          <select name="category-id">
-            <option value="1">커피</option>
-            <option value="2">논커피</option>
-            <option value="3">티/차</option>
-            <option value="4">에이드</option>
-            <option value="5">주스/스무디</option>
-            <option value="6">아이스크림</option>
-            <option value="7">베이커리</option>
-          </select>
-        </section>
-        <!-- ---- 메뉴 목록 ------------------------- -->
-        <section>
-          <h1>메뉴 목록</h1>
-          <div>
-            <!-- 메뉴 -->
-            <article>
-              <a href="./detail.html">
-                <div>이미지</div>
-                <div>아메리카노</div>
-                <div>230 ML</div>
-                <div>4,500원</div>
-              </a>
-              <div><a href="./edit.html">수정버튼</a></div>
-            </article>
-        </section>
-        <!-- 메뉴 -->
-    </section>
+    <h1><a href="/index.html">NCafe</a></h1> <!-- header 제목 -->
+    <div>
+      <button>공유</button>
     </div>
+  </header>
+  <!-- header e -->
+  <!-- main s -->
+  <main>
+    <!-- main section s -->
+    <section>
+      <h1>등록된 메뉴</h1> <!-- main section 제목 -->
+      <div>
+        <!-- 메뉴 검색 section s-->
+        <section>
+          <h1>메뉴 검색폼</h1> <!-- 메뉴검색 section 제목 -->
+          <form>
+            <label>메뉴 검색 <input type="text" name="menu-search" placeholder="메뉴를 입력해주세요"></label>
+            <div>
+              <button>검색</button>
+            </div>
+          </form>
+        </section>
+        <!-- 메뉴 검색 section e -->
+        <!--  카테고리 목록 section s -->
+        <section>
+          <h1>카테고리 목록</h1> <!-- 카테고리 section 제목  -->
+          <ul>
+            <li><button>커피</button></li>
+            <li><button>논커피</button></li>
+            <li><button>티/차</button></li>
+            <li><button>에이드</button></li>
+            <li><button>주스/스무디</button></li>
+            <li><button>아이스크림</button></li>
+            <li><button>베이커리</button></li>
+          </ul>
+        </section>
+        <!-- 카테고리 목록 section e -->
+        <!-- 메뉴 목록 section s -->
+        <section>
+          <h1>메뉴 목록</h1> <!-- 메뉴목록 section 제목 -->
+          <ul>
+            <!-- 메뉴 -->
+            <li>
+              <article onclick="location.href='detail.html'">
+                <h1>아메리카노</h1> <!-- 메뉴 제목 -->
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>4,500원</div>
+                  <div>
+                    <button onclick="event.stopPropagation(); location.href='edit.html';">수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article onclick="location.href='detail.html'">
+                <h1>카푸치노</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>5,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>카페라떼</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>5,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>말차라떼</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>6,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>딸기라떼</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>6,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>아이스크림</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>4,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>아포가토</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>4,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>초코라떼</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>6,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>케모마일티</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>4,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>히비스커스티</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>4,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>녹차</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>4,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>초코라떼</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>6,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!-- 메뉴 -->
+            <li>
+              <article>
+                <h1>홍차</h1>
+                <div>
+                  <div>이미지</div>
+                  <div>230 ML</div>
+                  <div>4,500원</div>
+                  <div>
+                    <button>수정</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <!-- 메뉴 목록 section e -->
+      </div>
     </section>
+    <!-- main section e -->
   </main>
+  <!-- main e -->
+  <!-- nav s -->
   <nav>
     <h1>바로가기 메뉴</h1>
     <ul>
-      <li><a href="../index.html">대시보드</a></li>
-      <li><a href="./list.html">커피목록</a></li>
-      <li><a href="./create.html">메뉴추가</a></li>
+      <li><a href="/admin/index.html">대시보드</a></li>
+      <li><a href="/admin/menu/list.html">메뉴목록</a></li>
+      <li><a href="/admin/menu/create.html">메뉴추가</a></li>
     </ul>
   </nav>
-  <!-- === footer ==================== -->
+  <!-- nav e -->
+  <!-- footer s -->
   <footer>
     <section>
       <h1>사이트 정보</h1>
@@ -94,6 +282,8 @@
       </div>
     </section>
   </footer>
+  <!-- footer e -->
 </body>
+
 
 </html>
