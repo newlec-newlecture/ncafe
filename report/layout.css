@@ -20,6 +20,8 @@ body {
     box-sizing: border-box;
     background-color: #F9F7F5;
     margin: 40px auto;
+    position: relative;
+    overflow: scroll;
 }
 
 .header {
