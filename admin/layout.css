@@ -1,0 +1,120 @@
+/*고정크기 (cm, mm / px), 가변크기 (em, rem, %, vw, vh)*/
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+#root{
+    background-color: #f8f8f8;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    background-color: red;
+    height: 64px;
+    padding: 0 16px;
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}
+.body{
+    /* background-color: transparent; <-투명색이지만 없어도 투명 */
+    flex-grow: 1;
+    display: flex;
+    /* flex-direction: row; <- 기본값 */
+}
+.aside{
+    box-sizing: border-box; 
+    width: 48px;
+    background-color: white;
+    padding: 10px;
+}
+main{
+    flex-grow: 1;
+    padding: 20px;
+}
+.footer{
+    background-color: white;
+    height: 100px;
+}
+.toolbar{
+    height: 64px;
+    width: 100%;
+    background-color: yellow;
+    position: fixed;
+    bottom: 0;
+}
+.toolbar>h1{
+    display: none;
+}
+.toolbar>h1+ul{
+    display: flex;
+}
+
+/*
+1. 박스크기
+    1. 박스의 기본 크기
+    너비 : 100%
+    높이 : 0 -> 자식이 높이를 결정한다.
+    2. 가장 상위 박스는?
+    html -> body -> div#root -> header, main, footer
+    3. 박스의 크기를 설정하기
+    크기 단위 : cm, mm, px | em, rem, %, vw, vh
+    4. 크기 상속
+    - 자식 박스가 부모 박스의 크기를 상속받는다.
+        % vs inherit
+2. 박스의 여백
+    1. 마진
+        - 박스의 외부 여백
+    2. 패딩
+        - 박스의 내부 여백
+3. 박스의 배치
+    1. 기본 레이아웃
+        - 위에서 아래로 배치
+        - 왼쪽에서 오른쪽으로 배치
+    2. 박스의 레이아웃 설정
+        1. flexbox 설정
+        - display : flex;
+        - flex-direction : row | row-reverse | column | column-reverse;
+        2. 박스정렬방식
+        - 메인 축 방향 정렬 : justify-content
+        - 교차 축 방향 정렬 : align-items
+        3. 특정 아이템 정렬
+        - justify-self
+        - align-self
+        4. 특정 아이템 사이에 여백 넣기
+        - margin-auto
+        ** 모든 정렬은 박스를 이동시키는 것이 아니라 여백을 이동시키는 작업이다.
+            즉. 백이여 없으면 정렬도 없다.
+        5. 박스 선택
+        - class 명으로 선택하는 것이 유리하다.
+        6. 정렬과 박스 크기
+        - 수직축 크로스 정렬을 할 때는 컨텐츠의 크기가 박스의 크기가 된다.
+
+4. 박싱 실습    
+5. 박스에 패딩주기
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    1. 축약표현
+        padding: 10px 20px 30px 40px;
+        padding: 10px 20px;
+    2. 박스크기에 영향을 주는 속성
+        padding -> box-sizing: border-box;           -
+6. 박스의 수동 위치
+    //자동위치이므로 절대좌표를 사용할 수 없는 position
+    1. position: ststic;
+    // 절대조표를 이용하는 position
+    - 중요한 부분은 left/top을 사용할 때 그 원점이 무엇인지에 따라서
+    - 다음 4가지 경우가 있다
+    2. position: absolute; // 문서의 좌/상단 꼭지점이 원점
+    3. position: fixed;    // 화면의 좌/상단 꼭지점이 원점
+    4. position: sticky;
+    5. position: relative;
+*/
