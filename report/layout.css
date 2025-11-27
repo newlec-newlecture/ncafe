@@ -1,56 +1,77 @@
-html{
-    height: 100%;
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
-.body{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
+
 .header{
-    background-color: white;
     height: 64px;
-    width: 100%;
-    padding: 0 16px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 0;
+    padding: 0 10px;
+    background-color: #1B3C53;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
+
+.header > h1 > a{
+    color: white;
+}
+
+.share{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
 #chart{
+    width: 100%;
     flex-grow: 1;
+}
+
+.chart{
+    margin: 16px;
+    background-color: E3E3E3;
+    text-align: center;
+    height: 300px;
+    background-color: #E3E3E3;
+}
+
+.h1{
+    text-align: center;
+    color: black;
+}
+
+.footer-info{
+    background-color: gray;
+    margin: 10px;
     display: flex;
 }
-/* .aside{
-    box-sizing: border-box;
-    background-color: white;
-    width: 48px;
 
-    padding: 10px;
-} */
-main{
-    flex-grow: 1;
-    padding: 20px;
-    position: relative;
-
-     }
-/* .box{
-    background-color: blue;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 100px;
-    left: 48px
-} */
 
 .tool-bar{
-    height: 64px;
+    
+    position: fixed;
+    bottom: 0px;
     width: 100%;
-    background-color: green;
-    padding: 0 16px;
-    position: sticky;
-    bottom: 150px;
+    height: 64px;
+    background-color: #456882;
 }
-.footer{
-    background-color: white;
-    height: 100px;
-    flex-shrink: 0;
+
+.tool-bar > ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
 }
+
+.tool-bar > ul >li{
+    float: left;
+}
+
+.tool-bar > ul > li > a{
+    color: white;
+}
+
