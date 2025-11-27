@@ -47,9 +47,18 @@
     1. 축약표현
         padding: 10px 20px 30px 40px;
         padding: 10px 20px;
-    2. 패딩에 영향을 주는 속성
-        box-sizing: border-box;
-        
+    2. 박스크기에 영향을 주는 속성
+        padding -> box-sizing: border-box;
+6. 박스의 수동 위치
+    // 자동위치이므로 절대좌표를 사용할 수 없는 position
+    1. position: static;
+    // 절대좌표를 이용하는 position 
+    - 중요 한 부분은 left/top을 사용할 때 그 원점이 무엇인지에 따라서
+    - 다음 4가지 경우가 있다.
+    2. position: absolute; // 문서의 좌/상단 꼭지점이 원점
+    3. position: fixed;    // 화면의 좌/상단 꼭지점이 원점
+    4. position: sticky;
+    5. position: relative;
 */
 html{
     height: 100%;
@@ -70,8 +79,12 @@ body{
 .header{
     /* boxing */
     height: 64px;
-    background-color: white;
+    width: 100%;
+    background-color: yellow;
     padding:0 16px;
+    
+    position: fixed; 
+    top: 0;
 }
 .body{
     /* boxing */
@@ -86,16 +99,42 @@ body{
 
 .aside{
     /* boxing */
-    width: 48px;
+    box-sizing: border-box;
+    width: 348px;
     background-color: white;
 
     padding:10px;
+
 }
 
 main{
     /* boxing */
     flex-grow: 1; 
-    padding:20px;
+    padding:20px;   
+    
+    position: relative;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+.tool-bar{
+    /* boxing */
+    height: 64px;
+    width: 100%;
+    background-color: rgb(171, 245, 175);
+    padding:0 16px;
+    
+    position: fixed; 
+    /* top:500px;     */
+    bottom: 0;
 }
 
 .footer{
