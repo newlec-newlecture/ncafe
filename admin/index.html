@@ -6,10 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-
-    .chart-section>.title+div>section.first-child~section{
+    h1[lang="ko"] {
       color: blue;
       border: 1px dotted blue;
+    }
+
+    .h1{
+      color: red;
+      border: 1px dotted red;
     }
   </style>
 </head>
@@ -27,7 +31,7 @@
   <main>
     <!-- main/section s -->
     <section>
-      <h1>차트</h1> <!-- main section 제목 -->
+      <h1 class="h1" lang="ko">차트</h1> <!-- main section 제목 -->
       <div>
         <!-- 주간 매출 현황 section s -->
         <article>
