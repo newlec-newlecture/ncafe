@@ -1,0 +1,49 @@
+html {
+    height: 100%;
+}
+.header {
+    position: sticky;
+    top: 0;
+    padding: 0 16px;
+    height: 64px;
+    flex-shrink: 0;
+    background: white;
+}
+.body {
+    margin: 0;
+    /* height: 100%; */
+    background: #f8f8f8;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.wrap {
+    display: flex;
+    height: 100%;
+}
+.aside {
+    padding: 10px;
+    width: 48px;
+    background: white;
+    box-sizing: border-box;
+}
+main {
+    flex-grow: 1;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+    top: -10px;
+    background: red;
+}
+.tool-bar {
+    position: fixed;
+    bottom: 0;
+}
+.footer {
+    position: sticky;
+    flex-shrink: 0;
+    height: 100px;
+    background: white;
+}
