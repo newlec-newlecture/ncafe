@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="layout.css">
 </head>
 
@@ -13,9 +14,9 @@
     <div id="root">
         <!-- header s -->
         <header class="header">
-            <h1><a href="/index.html">NCafe</a></h1> <!-- header 제목 -->
+            <h1><a href="/index.html"><span class="icon"></span>NCafe</a></h1> <!-- header 제목 -->
             <div>
-                <button>공유</button>
+                <button class="icon icon-share-btn"></button>
             </div>
         </header>
         <!-- header e -->
@@ -29,8 +30,7 @@
                     <article>
                         <h1>주간 매출 현황</h1> <!-- 주간 매출 현황 제목 -->
                         <div>
-                            <img src="image/chart-weekly.png"
-                                alt="">
+                            <img src="image/chart-weekly.png" alt="">
                         </div>
                     </article>
                     <!-- 주간 매출 현황 section e -->
@@ -38,8 +38,7 @@
                     <article>
                         <h1>오늘의 주문</h1> <!-- 오늘의 주문 제목 -->
                         <div>
-                            <img src="image/chart-today.png"
-                                alt="">
+                            <img src="image/chart-today.png" alt="">
                         </div>
                     </article>
                     <!-- 오늘의 주문 section e -->
@@ -82,9 +81,9 @@
         <nav class="nav">
             <h1>바로가기 메뉴</h1> <!-- nav 제목 -->
             <ul>
-                <li><a href="/admin/index.html">대시보드</a></li>
-                <li><a href="/admin/menu/list.html">메뉴목록</a></li>
-                <li><a href="/admin/menu/create.html">메뉴추가</a></li>
+                <li><a class="icon icon-dashboard active" href="/admin/index.html"></a></li>
+                <li><a class="icon icon-menulist" href="/admin/menu/list.html"></a></li>
+                <li><a class="icon icon-create" href="/admin/menu/create.html"></a></li>
             </ul>
         </nav>
         <!-- nav e -->

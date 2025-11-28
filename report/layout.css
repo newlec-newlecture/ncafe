@@ -1,92 +1,3 @@
-/* 공통 */
-html {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    width: 100%;
-    height: 100%;
-    background-color: #444444;
-}
-
-#root {
-    display: flex;
-    flex-direction: column;
-    width: 440px;
-    height: 956px;
-    max-width: 440px;
-    max-height: 956px;
-    box-sizing: border-box;
-    background-color: #F9F7F5;
-    margin: 40px auto;
-    position: relative;
-    overflow: scroll;
-
-    &::-webkit-scrollbar {
-        display: none;
-        width: 0;
-        height: 0;
-    };
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.header {
-    box-sizing: border-box;
-    display: flex;
-    width: 100%;
-    height: 64px;
-    background-color: #F9F7F5;
-    position: sticky;
-    top: 0;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 16px;
-    flex-shrink: 0;
-}
-
-.header a{
-    font-size: 16px;
-    font-weight: bold;
-}
-
-main {
-    box-sizing: border-box;
-    width: 100%;
-    flex-grow: 1;
-    background-color: #F9F7F5;
-    padding: 0 24px;
-}
-
-.nav {
-    box-sizing: border-box;
-    width: 100%;
-    height: 64px;
-    position: sticky;
-    background-color: #F9F7F5;
-    border-top: 3px solid #E9E9E9;
-    bottom: 0;
-    flex-shrink: 0;
-}
-
-.nav h1 {
-    display: none;
-}
-
-.nav ul {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 48px 12px 48px;
-}
-
 /* 개인 */
 
 .main_section {
@@ -119,7 +30,7 @@ main {
 .chart_section article {
     display: flex;
     width: 100%;
-    height: 320px;
+    height: 350px;
     flex-direction: column;
     align-items: center;
     gap: 16px;
@@ -137,46 +48,6 @@ main {
 
 .chart_section article div img{
     width: 100%;
-    height: 250px;
+    height: 300px;
+    object-fit: contain;
 }
-
-.footer {
-    box-sizing: border-box;
-    width: 100%;
-    background-color: #aaaaaa;
-    padding: 20px;
-}
-
-.footer>section {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
-
-.footer>section>h1 {
-    font-size: 16px;
-    font-weight: bold;
-}
-.footer>section div{
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.footer>section div section{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.footer>section div h1{
-    font-size: 14px;
-    font-weight: bold;
-}
-
