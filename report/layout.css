@@ -148,5 +148,40 @@ main {
 }
 
 .footer {
+    padding: 40px 48px;
+}
+
+.footer-section {
+    margin-bottom: 50px;
+}
+
+.footer-section>h1 {
     display: none;
+}
+
+.site-info {
+    display: flex;
+    gap: 250px;
+}
+
+.site-info dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    /* 용어/값 너비 */
+    gap: 6px 16px;
+    /* 행/열 간격 */
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    /* 구분선(선택) */
+}
+
+.site-info dt {
+    font-weight: 600;
+    color: #333;
+}
+
+.site-info dd {
+    margin: 0;
+    color: #555;
 }
