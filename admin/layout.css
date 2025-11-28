@@ -18,7 +18,7 @@ body{
     width: 100%;
     padding: 0 16px;
     box-sizing: border-box;
-
+    background-image: url(../image/tree.jpg);
     position: sticky;
     top: 0;
 }
@@ -43,7 +43,11 @@ main{
     width: 50px;
     height: 50px;
     background-color: green;
-    position:fixed
+    position:fixed;
+    bottom: 16px;
+    right: 16px;
+    box-shadow: 5px 5px 10px 0px rgba(72, 86, 117, 0.3);
+    background: linear-gradient(0deg, #ffc6ad 0%, #a094ff 100%);
 }
 
 .tool-bar{
