@@ -83,6 +83,10 @@ main {
     margin-top: 48px;
 }
 
+.main article img {
+    width: 100%;
+}
+
 .nav {
     /* boxing */
     height: 64px;
@@ -96,7 +100,6 @@ main {
     bottom: 0;
 
     /* 위쪽 선대신 그림자넣기 */
-    /* border-top: solid 1px gray; */
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -159,9 +162,8 @@ main {
     display: none;
 }
 
-.site-info {
-    display: flex;
-    gap: 250px;
+.site-info>section {
+    margin-bottom: 16px;
 }
 
 .site-info dl {
