@@ -62,6 +62,7 @@ main{
     color: #494949;
     font-weight: bold;
     margin-bottom: 48px;
+    padding: 8px 0px;
 }
 
 .chart{
@@ -120,13 +121,23 @@ main{
 }
 .footer{
     background-color: #fff;
-    padding: 30px;
     box-sizing: border-box;
-
+    padding: 10px;
 }
 .footer>section{
 
 }
-.footer>h1{
+.footer>section>h1{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.info>h1{
+    font-size: 20px;
+}
+.info\:1{
+    padding-bottom: 20px;
+}
+
+.info\:2{
 
 }
