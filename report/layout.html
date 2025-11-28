@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <style>
 
 
@@ -19,10 +20,24 @@
         <!-- header s -->
         <header class="header">
             <div class="logo">
-                <a href="/index.html">NCafe</a> <!-- header 제목 -->
+                <a href="/index.html">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5007 6.5C7.85055 6.5 4.77142 9.03505 3.81104 12.5H19.1903C18.2299 9.03505 15.1507 6.5 11.5007 6.5Z" stroke="#B8672E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.50049 14.7963C3.50049 17.0056 4.33324 19.0132 5.691 20.5H17.31C18.6677 19.0132 19.5005 17.0056 19.5005 14.7963C19.5005 13.9996 19.3922 13.2293 19.1901 12.5H3.81088C3.60876 13.2293 3.50049 13.9996 3.50049 14.7963Z" stroke="#B8672E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.5 6.5V5.5C13.5 4.39543 12.6046 3.5 11.5 3.5C10.3954 3.5 9.5 4.39543 9.5 5.5V6.5" stroke="#B8672E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.50027 14C3.50027 14 2.50757 13.9343 2 12.75C1.24997 11 2.50008 9.99991 3.00009 8.49996C3.38049 7.35881 2.60341 6.50701 2.20985 6.16481C2.08374 6.05516 2.00023 5.89961 2.00019 5.73246L2.00011 5.42366C2.00004 5.17916 2.17696 4.97207 2.42126 4.96309C2.93909 4.94408 3.83133 4.99846 4.50011 5.49996C5.50027 6.24996 6.00027 8.49996 6.00027 8.49996" stroke="#B8672E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.5 20.5H18.5" stroke="#B8672E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.5 12.5C20.8807 12.5 22 11.3807 22 10C22 8.6193 20.8807 7.5 19.5 7.5C18.4749 7.5 17.5938 8.11705 17.208 9" stroke="#B8672E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    NCafe
+                </a> <!-- header 제목 -->
             </div>
             <div class="link">
-                <a href="">공유</a>
+                <a href="">
+                    <span class="material-symbols-outlined">
+                        share
+                        </span>
+                </a>
             </div>
         </header>
         <!-- header e -->
@@ -41,7 +56,7 @@
                     <article class="chart chart:1">
                         <h1>주간 매출 현황</h1> <!-- 주간 매출 현황 제목 -->
                         <div>
-                            <img src="../image/차트1.png" alt="">
+                            <img src="../image/weekly-chart.png" alt="">
                         </div>
                     </article>
                     <!-- 주간 매출 현황 section e -->
@@ -49,7 +64,7 @@
                     <article class="chart chart:2">
                         <h1>오늘의 주문</h1> <!-- 오늘의 주문 제목 -->
                         <div>
-                            <img src="../image/차트2.png" alt="">
+                            <img src="../image/daily-chart.png" alt="">
                         </div>
                     </article>
                     <!-- 오늘의 주문 section e -->
@@ -63,28 +78,31 @@
             <section>
                 <h1>사이트 정보</h1>
                 <div>
-                    <section class="info info:1">
+                    <section class="company company:1">
                         <h1>회사정보</h1>
                         <dl>
                             <dt>상호</dt>
                             <dd>뉴카페</dd>
-                            <dt>업자등록번호</dt>
-                            <dd>111-222222-11</dd>
+                            <dt>사업자등록번호</dt>
+                            <dd>987-65-004321</dd>
                             <dt>대표</dt>
                             <dd>뉴렉처</dd>
                         </dl>
                     </section>
-                    <section class="info info:2">
+                    <section class="company company:2">
                         <h1>연락처</h1>
                         <dl>
                             <dt>주소</dt>
-                            <dd>서울시 마포구 백범로...</dd>
+                            <dd>서울시 마포구 백범로3 용빌딩 3층 (KT프라자건물 3층)</dd>
                             <dt>전화</dt>
-                            <dd>02-111-333</dd>
+                            <dd>02-1234-5678</dd>
                             <dt>이메일</dt>
                             <dd>help@ncafe.com</dd>
                         </dl>
                     </section>
+                </div>
+                <div class="copyright">
+                    © 2025. Ncafe. All rights reserved.
                 </div>
             </section>
         </footer>
@@ -92,9 +110,39 @@
         <nav class="tool-bar">
             <h1>바로가기 메뉴</h1> <!-- nav 제목 -->
             <ul>
-                <li><a href="/admin/index.html">대시보드</a></li>
-                <li><a href="/admin/menu/list.html">메뉴목록</a></li>
-                <li><a href="/admin/menu/create.html">메뉴추가</a></li>
+                <li>
+                    <a href="/admin/index.html">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29.25 22C31.0449 22 32.5 20.5449 32.5 18.75C32.5 16.9551 31.0449 15.5 29.25 15.5C27.4551 15.5 26 16.9551 26 18.75C26 20.5449 27.4551 22 29.25 22Z" stroke="#B8672E" stroke-width="2"/>
+                        <path d="M29.25 32.5C31.0449 32.5 32.5 31.0449 32.5 29.25C32.5 27.4551 31.0449 26 29.25 26C27.4551 26 26 27.4551 26 29.25C26 31.0449 27.4551 32.5 29.25 32.5Z" stroke="#B8672E" stroke-width="2"/>
+                        <path d="M18.75 22C20.5449 22 22 20.5449 22 18.75C22 16.9551 20.5449 15.5 18.75 15.5C16.9551 15.5 15.5 16.9551 15.5 18.75C15.5 20.5449 16.9551 22 18.75 22Z" stroke="#B8672E" stroke-width="2"/>
+                        <path d="M18.75 32.5C20.5449 32.5 22 31.0449 22 29.25C22 27.4551 20.5449 26 18.75 26C16.9551 26 15.5 27.4551 15.5 29.25C15.5 31.0449 16.9551 32.5 18.75 32.5Z" stroke="#B8672E" stroke-width="2"/>
+                        </svg>
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/menu/list.html">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 22C13 28.0752 16 33 22 33C28 33 31 28.0752 31 22H13Z" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 19V15" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27 19V17" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 19V17" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M30.0952 27.3115C30.5901 26.0195 30.882 24.5687 30.9709 23.0255C31.1434 23.0087 31.3201 23 31.5 23C33.433 23 35 24.0073 35 25.25C35 26.4927 33.433 27.5 31.5 27.5C31.0004 27.5 30.5252 27.4327 30.0952 27.3115Z" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/menu/create.html">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 34C29.5229 34 34 29.5229 34 24C34 18.4771 29.5229 14 24 14C18.4771 14 14 18.4771 14 24C14 29.5229 18.4771 34 24 34Z" stroke="#494949" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M24 20V28" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 24H28" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- nav e -->
