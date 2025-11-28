@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/report/asset/css/reset.css">
     <link rel="stylesheet" href="/report/asset/css/common.css">
+    <link rel="stylesheet" href="/report/asset/css/create.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
         <main>
             <section class="main_section">
                 <h1>메뉴 등록</h1>
-                <form id="menu-form" method="post" action="create.php">
+                <form class="create-form" id="menu-form" method="post" action="create.php">
                     <div>
                         <label>
                             메뉴 이미지 <input type="file">
@@ -70,27 +71,31 @@
                         </label>
                     </div>
 
-                    <div>
-                        <label>
-                            <input type="checkbox" name="is-sellable">
-                            판매가능
-                        </label>
-                    </div>
+                    <div class="checkbox-form">
+                        <div>
+                            <label>
+                                <input type="checkbox" name="is-sellable">
+                                판매가능
+                            </label>
+                        </div>
 
-                    <div>
-                        <label>
-                            <input type="checkbox" name="is-hot">
-                            Hot
-                        </label>
-                    </div>
+                        <div class="is-hot-ice-chkbox">
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="is-hot">
+                                    Hot
+                                </label>
+                            </div>
 
-                    <div>
-                        <label>
-                            <input type="checkbox" name="is-ice">
-                            Iced
-                        </label>
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="is-ice">
+                                    Iced
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div>
+                    <div id="button-page">
                         <button>저장</button>
                         <button type="button" onclick="location.href='list.html'">취소</button>
                     </div>
