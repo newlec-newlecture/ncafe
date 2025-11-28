@@ -45,7 +45,8 @@ body {
     display: flex;
     width: 100%;
     height: 64px;
-    background-color: #F9F7F5;
+    background-color: #ffdfbc;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     justify-content: space-between;
@@ -61,6 +62,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     color: #B8672E;
+    font-family: sans-serif;
     gap: 4px;
 }
 
@@ -89,8 +91,8 @@ main {
     width: 100%;
     height: 64px;
     position: sticky;
-    background-color: #F9F7F5;
-    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.1);
+    background-color: #ffdfbc;
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.1);
     bottom: 0;
     flex-shrink: 0;
 }
@@ -137,7 +139,7 @@ main {
 .footer {
     box-sizing: border-box;
     width: 100%;
-    background-color: #aaaaaa;
+    background-color: #fae1c7;
     padding: 20px;
 }
 
@@ -151,27 +153,70 @@ main {
 }
 
 .footer>section>h1 {
+    align-self: start;
     font-size: 16px;
     font-weight: bold;
+    color: #744221;
 }
-.footer>section div{
+.footer>section>div{
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.footer>section div section{
+.site-info-section{
+    width: 100%;
     display: flex;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .footer>section div h1{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
+    color: #4b382b;
+}
+
+.footer dl{
+    margin-top: 10px;
+}
+
+.footer dl dt{
+    font-size: 10px;
+    font-weight: bold;
+    color:#8C471A;
+}
+
+.footer dl dd{
+    font-size: 10px;
+    font-weight: normal;
+    color:#555555;
+}
+
+.footer ul{
+    margin-top: 10px;
+}
+
+.footer ul li{
+    font-size: 10px;
+    font-weight: bold;
+    color:#e4803d;
+}
+
+#copyright {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    border-top: 1px solid rgba(184, 103, 46, 0.3);
+    padding-top: 15px;
+    font-size: 10px;
+    color: #555555;
+    align-items: center;
 }
 
 .main_section {
@@ -191,5 +236,4 @@ main {
     box-sizing: border-box;
     /* height: 40px; */
 }
-
 
