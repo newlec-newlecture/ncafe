@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+}
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 16px;
+    background: white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    font-weight: bold;
+    color: #b8672E;
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.header .btn-share  {
+    display: flex;
+    align-items: center;
+}
+
+/* 아래 섹션에 padding-bottom을 넣는 방법으로 조금 더 깔끔하게 수정함함 */
+.section {
+    padding: 30px 24px 50px;
+    text-align: center;
+}
+.chart {
+    margin-top: 48px;
+}
+/*
+방법 1: <이거 대신 .section에 padding-bottom 추가함함
+*/
+/* .chart-mb {
+    margin-bottom: 50px;
+} */
+
+.chart-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.chart-img img{
+    width: 100%;
+}
+/* 
+방법 2:
+.chart:last-child {
+    margin-bottom: 50px;
+}
+ */
+
+ .tool-bar {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    background: white;
+ }
+ .tool-bar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
+ .tool-btn {
+    display: block;
+ }
+ .footer {
+    background: rgba(0,0,0,0.8);
+    color:white;
+    padding: 20px 0;
+    text-align: center;
+ }

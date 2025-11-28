@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
     <title>Document</title>
 
 </head>
@@ -14,38 +16,51 @@
     <div id="root">
         <header class="header">
             <div class="header-logo">
-                <img src="./teapot.svg" alt="">
+                <img src="./images/teapot.svg" alt="NCafe 로고고">
                 NCafe
             </div>
             <button class="btn-share">
-                <img src="./share-one.svg" alt="공유버튼">
+                <img src="./images/share-one.svg" alt="공유버튼">
             </button>
         </header>
         <section class="section">
-            <h1>차트</h1>
+            <h1 class="section-title">차트</h1>
             <div class="chart">
                 <p class="chart-title">주간 매출 현황</p>
                 <div class="chart-img">
-                    <img src="./Line Chart.svg" alt="주간 매출 현황 차트">
+                    <img src="./images/Line Chart.svg" alt="주간 매출 현황 차트">
                 </div>
             </div>
-            <div class="chart">
+            <div class="chart chart-mb">
                 <p class="chart-title">오늘의 주문</p>
                 <div class="chart-img">
-                    <img src="./Radial Bar Chart.svg" alt="오늘의 주문">
+                    <img src="./images/Radial Bar Chart.svg" alt="오늘의 주문">
                 </div>
             </div>
         </section>
+        <footer class="footer">
+            © 2025 5Zo, Inc.
+        </footer>
         <nav class="tool-bar">
             <ul>
-                <li><a href="#">대시보드</a></li>
-                <li><a href="#">메뉴목록</a></li>
-                <li><a href="#">메뉴등록</a></li>
+                <li>
+                    <a href="#" class="tool-btn">
+                        <img src="./images/dashboard.svg" alt="대시보드 아이콘">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tool-btn">
+                        <img src="./images/menulist.svg" alt="메뉴목록 아이콘">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tool-btn">
+                        <img src="./images/menuedit.svg" alt="메뉴등록 아이콘">
+                    </a>
+                </li>
             </ul>
         </nav>
-        <footer class="footer">
-            © 2025 hyeun, Inc.
-        </footer>
+        
     </div>
 </body>
 
