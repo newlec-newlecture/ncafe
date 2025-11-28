@@ -1,93 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="layout.css">  
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="layout.css">
+  <style>
+
+
+
+  </style>
 </head>
 
 <body>
-  <!-- header s -->
-  <header class="header">
-    <h1><a href="/index.html">NCafe</a></h1> <!-- header 제목 -->
-    <div>
-      <button>공유</button>
+    <div id="root">
+        <!-- header s -->
+        <header class="header">
+            <div class="logo">
+                <a href="/index.html">NCafe</a> <!-- header 제목 -->
+            </div>
+            <div class="link">
+                <a href="">공유</a>
+            </div>
+        </header>
+        <!-- header e -->
+        <!-- main s -->
+        <main>
+            <div class="test">
+                <div class="test-ab">
+                    
+                </div>
+            </div>
+            <!-- main/section s -->
+            <section class="chart-sec">
+                <h1 class="h1" lang="kor">차트</h1> <!-- main section 제목 -->
+                <div>
+                    <!-- 주간 매출 현황 section s -->
+                    <article class="chart chart:1">
+                        <h1>주간 매출 현황</h1> <!-- 주간 매출 현황 제목 -->
+                        <div>
+                            <img src="../image/차트1.png" alt="">
+                        </div>
+                    </article>
+                    <!-- 주간 매출 현황 section e -->
+                    <!-- 오늘의 주문 section s -->
+                    <article class="chart chart:2">
+                        <h1>오늘의 주문</h1> <!-- 오늘의 주문 제목 -->
+                        <div>
+                            <img src="../image/차트2.png" alt="">
+                        </div>
+                    </article>
+                    <!-- 오늘의 주문 section e -->
+                </div>
+            </section>
+            <!-- main/section e -->
+        </main>
+
+        <!-- footer s -->
+        <footer class="footer">
+            <section>
+            <h1>사이트 정보</h1>
+            <div>
+                <section>
+                <h1>회사정보</h1>
+                <dl>
+                    <dt>상호</dt>
+                    <dd>뉴카페</dd>
+                    <dt>업자등록번호</dt>
+                    <dd>111-222222-11</dd>
+                    <dt>대표</dt>
+                    <dd>뉴렉처</dd>
+                </dl>
+                </section>
+                <section>
+                <h1>연락처</h1>
+                <dl>
+                    <dt>주소</dt>
+                    <dd>서울시 마포구 백범로...</dd>
+                    <dt>전화</dt>
+                    <dd>02-111-333</dd>
+                    <dt>이메일</dt>
+                    <dd>help@ncafe.com</dd>
+                </dl>
+                </section>
+            </div>
+            </section>
+        </footer>
+        <!-- nav s -->
+        <nav class="tool-bar">
+            <h1>바로가기 메뉴</h1> <!-- nav 제목 -->
+            <ul>
+                <li><a href="/admin/index.html">대시보드</a></li>
+                <li><a href="/admin/menu/list.html">메뉴목록</a></li>
+                <li><a href="/admin/menu/create.html">메뉴추가</a></li>
+            </ul>
+        </nav>
+        <!-- nav e -->
     </div>
-  </header>
-  <!-- header e -->
-  <!-- main s -->
-  <main>
-    <!-- main/section s -->
-    <section>
-      <h1>차트</h1> <!-- main section 제목 -->
-      <div>
-        <!-- 주간 매출 현황 section s -->
-        <article>
-          <h1>주간 매출 현황</h1> <!-- 주간 매출 현황 제목 -->
-          <div>
-            <img
-              src="../image/차트1.png"
-              alt="">
-          </div>
-        </article>
-        <!-- 주간 매출 현황 section e -->
-        <!-- 오늘의 주문 section s -->
-        <article>
-          <h1>오늘의 주문</h1> <!-- 오늘의 주문 제목 -->
-          <div>
-            <img
-              src="../image/차트2.png"
-              alt="">
-          </div>
-        </article>
-        <!-- 오늘의 주문 section e -->
-      </div>
-    </section>
-    <!-- main/section e -->
-  </main>
-  <!-- toolbar -->
-  <nav class="toolbar">
-    <h1>바로가기 메뉴</h1> <!-- nav 제목 -->
-    <ul>
-      <li><a href="/admin/index.html">대시보드</a></li>
-      <li><a href="/admin/menu/list.html">메뉴목록</a></li>
-      <li><a href="/admin/menu/create.html">메뉴추가</a></li>
-    </ul>
-  </nav>
-  <!-- footer s -->
-  <footer class="footer">
-    <section>
-      <h1>사이트 정보</h1>
-      <div>
-        <section>
-          <h1>회사정보</h1>
-          <dl>
-            <dt>상호</dt>
-            <dd>뉴카페</dd>
-            <dt>업자등록번호</dt>
-            <dd>111-222222-11</dd>
-            <dt>대표</dt>
-            <dd>뉴렉처</dd>
-          </dl>
-        </section>
-        <section>
-          <h1>연락처</h1>
-          <dl>
-            <dt>주소</dt>
-            <dd>서울시 마포구 백범로...</dd>
-            <dt>전화</dt>
-            <dd>02-111-333</dd>
-            <dt>이메일</dt>
-            <dd>help@ncafe.com</dd>
-          </dl>
-        </section>
-      </div>
-    </section>
-  </footer>
-  
 </body>
 <!--  footer e -->
-
 
 </html>
