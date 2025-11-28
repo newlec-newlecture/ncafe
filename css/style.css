@@ -1,0 +1,19 @@
+/* 공통 헤더 로고 영역 */
+
+/* heading */
+.heading {
+    font-weight: bold;
+    color: #494949;
+}
+
+.heading\:1 {
+    font-size: 18px;
+}
+
+.heading\:2 {
+    font-size: 16px;
+}
+
+.heading\:3 {
+    font-size: 18px;
+}
