@@ -122,8 +122,16 @@ main {
     background-image: url(/report/asset/image/menulist-icon.png);
 }
 
+.icon-menulist.active {
+    background-image: url(/report/asset/image/menulist-active-icon.png);
+}
+
 .icon-create {
     background-image: url(/report/asset/image/create-icon.png);
+}
+
+.icon-create.active {
+    background-image: url(/report/asset/image/create-active-icon.png);
 }
 
 .footer {
