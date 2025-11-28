@@ -1,7 +1,30 @@
-    /*
+/*
+
+// 가장 큰 박스(박스의 기본 레이아웃(flex 레이아웃),  -> 작은 박스 -> 콘텐츠
+1. 가장 밖에 있는 박스 확인
+2. 박스의 정렬(오토/수동) 방식 확인
+3. 정렬과 여백의 관계 확인
+4. 박스의 패딩, 마진 확인
+5. 박스 꾸미기 : 쉐도우, 배경, 보더, 등...
+6. 크기가 고정된 박스의 오버플로우 처리 확인
+-------------------------------------
+// 콘텐츠 박스에 대한 스타일
+1. 리셋
+   : 콘텐츠를 감싸는 블록의 기존 스타일을 제거하기 위한 스타일
+     h1,...h6, ul, li, .... a, strong, u, ...
+2. 콘텐츠 스타일(이미지, 아이콘, 버튼, 제목,..)
+   : heading, icon, button, list, card, ...
+3. 스타일의 집중화
+   1. 공통분모를 모아서 처리하기
+   2. 공통분모를 작성하는 방식 
+     - 조립형식, 확장형식
+4. 콘텐츠 박스 배치
+   : layout
+====================================================
+
 1. 박스크기
     1. 박스의 기본 크기
-    너비 : 100%
+    너비 : 100%/inherit
     높이 : 0 -> 자식이 높이를 결정한다.
     2. 가장 상위 박스는?
     html -> body -> div#root -> header, main, footer
@@ -59,6 +82,11 @@
     3. position: fixed;    // 화면의 좌/상단 꼭지점이 원점
     4. position: sticky;
     5. position: relative;
+7. shadow : box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+8. background
+9. 목록/표/..../
+10. 컨텐트
+11. 클래스를 잘 정리(...) / 슈도 클래스, 슈도 엘리먼트
 */
 html{
     height: 100%;
@@ -76,14 +104,31 @@ body{
     display: flex;
     flex-direction: column;      
 }
+
+/* 공통 분모는 위에 */
+.header, 
+main{    
+    /* background-image: url(../image/pngtree.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background: url(../image/pngtree.jpg) no-repeat center center;
+    background-size: contain;
+    background-position: center 100px;
+    background-attachment: fixed;    */
+
+}
+
+/* 특화된 속성은 덮어쓸 수 있는 아래에 */
 .header{
     /* boxing */
     height: 64px;
     width: 100%;
-    background-color: yellow;
+    /* background-color: yellow; */
+    /* background-position: left 0px; */
     padding:0 16px;
     
-    position: fixed; 
+    position: sticky; 
     top: 0;
 }
 .body{
@@ -100,11 +145,10 @@ body{
 .aside{
     /* boxing */
     box-sizing: border-box;
-    width: 348px;
+    width: 48px;
     background-color: white;
 
     padding:10px;
-
 }
 
 main{
@@ -123,6 +167,11 @@ main{
     position: absolute;
     top: 200px;
     left: 200px;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .tool-bar{
