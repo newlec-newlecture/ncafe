@@ -27,7 +27,7 @@
                 <form class="create-form" id="menu-form" method="post" action="create.php">
                     <div>
                         <label>
-                            메뉴 이미지 <input type="file">
+                            메뉴 이미지 <input class="icon" type="file" accept="image/*" multiple>
                         </label>
                     </div>
                     <div>
@@ -73,24 +73,27 @@
                     </div>
 
                     <div class="checkbox-form">
-                        <div>
+                        <div class="form-chkBox-sellable">
                             <label>
-                                <input type="checkbox" name="is-sellable">
+                                <input type="checkbox" class="chkBox-sellable" name="is-sellable">
+                                <span class="icon"></span>
                                 판매가능
                             </label>
                         </div>
 
-                        <div class="is-hot-ice-chkbox">
+                        <div class="form-is-hot-ice-chkbox">
                             <div>
                                 <label>
-                                    <input type="checkbox" name="is-hot">
+                                    <input type="checkbox" class="chkBox-hot" name="is-hot">
+                                    <span class="icon"></span>
                                     Hot
                                 </label>
                             </div>
 
                             <div>
                                 <label>
-                                    <input type="checkbox" name="is-ice">
+                                    <input type="checkbox" class="chkBox-ice" name="is-ice">
+                                    <span class="icon"></span>
                                     Iced
                                 </label>
                             </div>
