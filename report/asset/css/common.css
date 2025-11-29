@@ -192,6 +192,9 @@ main {
     font-size: 16px; /* 글씨 사이즈 */
     font-weight: bold; /* 글씨 두께 */
     color: #744221; /* 제목 색상 */
+    /* border-bottom: 3px solid rgba(104, 58, 25, 0.3);
+    padding-bottom: 15px;
+    box-sizing: border-box; */
 }
 
 /* footer 섹션 안 내용물 */
@@ -207,6 +210,12 @@ main {
     display: flex; /* flex 정렬 */
     flex-direction: row; /* 가로 정렬 */
     justify-content: space-between; /* 양끝 맞추고 알아서 정렬 */
+}
+
+.site-info-section>section {
+    border-left: 1px solid rgba(184, 103, 46, 0.3); /* 왼쪽 밑줄 */
+    padding-left: 15px; /* 밑줄과 컨텐츠 사이 거리 */
+    box-sizing: border-box; /* padding 있음으로 */
 }
 
 /* footer site-info-section 안에 소제목 */
@@ -250,10 +259,10 @@ main {
     box-sizing: border-box; /* padding 있음으로 */
     width: 100%; /* 넓이 채우기 */
     text-align: center; /* 가운데 정렬 */
-    margin-top: 15px; /* 상단 여백 */
-    border-top: 1px solid rgba(184, 103, 46, 0.3); /* 상단 밑줄 */
+    margin-top: 20px; /* 상단 여백 */
+    border-top: 3px solid rgba(104, 58, 25, 0.3); /* 상단 밑줄 */
     padding-top: 15px; /* 컨텐츠와 밑줄 사이 패딩 */
     font-size: 10px; /* 글씨 크기 */
-    color: #555555; /* 글씨 색상 */
+    color: #202020; /* 글씨 색상 */
 }
 
