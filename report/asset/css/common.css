@@ -1,27 +1,27 @@
 /* 공통 */
+/* html 크기 지정 */
 html {
     width: 100%;
     height: 100%;
 }
 
+/* body 크기 및 색상 지정 */
 body {
     width: 100%;
     height: 100%;
     background-color: #444444;
 }
 
+/* 기본 root 형식 지정 */
 #root {
-    display: flex;
-    flex-direction: column;
-    width: 440px;
-    height: 956px;
-    max-width: 440px;
-    max-height: 956px;
-    box-sizing: border-box;
-    background-color: #F9F7F5;
-    margin: 40px auto;
-    overflow: scroll;
+    display: flex; /* flex정렬 */
+    flex-direction: column;/* 세로정렬 */
+    width: 440px; /* 지정한 넓기 */
+    height: 956px;/* 지정한 높이 */
+    margin: 40px auto; /* 위아래 공백 (보기 편하게 하기위함) */
+    overflow: scroll; /* 넘치는 컨텐츠 스크롤 */
 
+    /* 스크롤바 없애는 작업 */
     &::-webkit-scrollbar {
         display: none;
         width: 0;
@@ -31,157 +31,238 @@ body {
     -ms-overflow-style: none;
 }
 
+/* 공통 아이콘 내용 */
 .icon {
-    width: 48px;
-    height: 48px;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 48px; /* 지정한 넓이 */
+    height: 48px; /* 지정한 높이 */
+    display: block; /* 블럭으로 처리 */
+    background-size: contain; /* 크기 본인 비율 유지 */
+    background-repeat: no-repeat; /* 반복 없음 */
+    background-position: center; /* 가운데 정렬 */
 }
 
+/* header */
 .header {
-    box-sizing: border-box;
-    display: flex;
-    width: 100%;
-    height: 64px;
-    background-color: #F9F7F5;
-    position: sticky;
-    top: 0;
-    justify-content: space-between;
-    padding: 16px;
-    flex-shrink: 0;
-    align-items: center;
+    box-sizing: border-box; /* padding 있음으로 추가 */
+    display: flex; /* flex 정렬 */
+    width: 100%; /* 부모의 넓이 채우기 */
+    height: 64px; /* 지정한 높이 */
+    background-color: #ffdfbc; /* header 색상 */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1); /* header 하단 그림자 표시 */
+    position: sticky; /* header의 위치는 유지 그러나 내릴때도 따라오게 하기 */
+    top: 0; /* 상단에 붙히기 */
+    justify-content: space-between; /* 헤더 로고와 공유하기 버튼 좌우로 붙히기 */
+    padding: 16px; /* 패딩 지정 */
+    flex-shrink: 0; /* 크기가 줄어들지 않게 하기 */
+    align-items: center; /* 가로선 가운데 정렬 */
 }
 
-.header a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    color: #B8672E;
-    gap: 4px;
+/* header 안에 아이콘 포함 제목 */
+.header-root {
+    display: flex; /* flex 정렬 */
+    flex-direction: row; /* 가로 정렬 */
+    font-size: 16px; /* 글씨 크기 */
+    font-weight: bold; /* 글씨 두께 */
+    color: #B8672E; /* 글씨 색상 */
+    font-family: sans-serif; /* 글씨체 */
+    gap: 4px; /* 아이콘과 글 사이 간격 */
 }
 
-.header a span{
-    width: 24px;
-    height: 24px;
-    background-image: url(/report/asset/image/main-icon.png);
+/* header 안 아이콘  */
+.header-root span{
+    width: 24px; /* 아이콘 넓이 */
+    height: 24px; /* 아이콘 높이 */
+    background-image: url(/report/asset/image/main-icon.png); /* 아이콘 배경 이미지 */
 }
 
+/* 공유하기 버튼 */
 .icon-share-btn {
-    width: 24px;
-    height: 24px;
-    background-image: url(/report/asset/image/share-icon.png);
+    width: 24px; /* 아이콘 넓이 */
+    height: 24px; /* 아이콘 높이 */
+    background-image: url(/report/asset/image/share-icon.png); /* 아이콘 배경 이미지 */
 }
 
+/* main */
 main {
-    box-sizing: border-box;
-    width: 100%;
-    flex-grow: 1;
-    background-color: #F9F7F5;
-    padding: 0 24px;
+    box-sizing: border-box; /* padding 있음으로 추가 */
+    width: 100%; /* 부모의 넓이 채우기 */
+    flex-grow: 1; /* 나머지 margin 채우기 */
+    flex-shrink: 0; /* 자신의 크기 유지 */
+    min-height: 826px; /* 전체크기 - 헤더 - 네비 ( footer가 침범함 )*/
+    background-color: #F9F7F5; /* main 배경색 */
+    padding: 0 24px; /* 패딩 추가 */
 }
 
+/* main 안쪽 직계 section */
+.main_section {
+    width: 100%; /* 넓이 채우기 */
+    height: 100%; /* 높이 채우기 */
+    display: flex; /* flex 정렬 */
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+}
+
+/* main section 제목 */
+.main_section>h1{
+    font-size: 18px; /* 글씨 크기 */
+    font-weight: bold; /* 글씨 굵기 */
+    font-family: sans-serif; /* 글씨체 */
+    padding: 8px 0; /* padding */
+    box-sizing: border-box; /* padding 있음으로 */
+    /* height: 40px; */
+}
+
+/* nav */
 .nav {
-    box-sizing: border-box;
-    width: 100%;
-    height: 64px;
-    position: sticky;
-    background-color: #F9F7F5;
-    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.1);
-    bottom: 0;
-    flex-shrink: 0;
+    width: 100%; /* 부모의 넓이 채우기 */
+    height: 64px; /* 지정된 높이 */
+    position: sticky; /* 자기 자리 유지한 채 따라오기 */
+    background-color: #ffdfbc; /* nav 색상 */
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.1); /* nav 상단 그림자 효과 */
+    bottom: 0; /* 하단에 붙히기 */
+    flex-shrink: 0; /* 자기 영역 유지 */
 }
 
-.nav h1 {
-    display: none;
+/* nav 제목 */
+.nav>h1 {
+    display: none; /* 보이지 않게 처리 */
 }
 
-.nav ul {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 48px 12px 48px;
+/* nav 안쪽 ul (이동목록)*/
+.nav>ul {
+    box-sizing: border-box; /* padding 있음으로 */
+    width: 100%; /* 부모 넓이 채우기 */
+    height: 100%; /* 부모 높이 채우기 */
+    display: flex; /* flex 정렬 */
+    flex-direction: row; /* 가운데 정렬 */
+    align-items: center; /* 가로축 가운데 정렬 */
+    justify-content: space-between; /* 양끝에 붙히고 거리 나누기 */
+    padding: 0 48px 12px 48px; /* padding 상 우 하 좌 */
 }
 
+/* 아이콘 배경 지정 */
+/* 대시보드 */
 .icon-dashboard {
     background-image: url(/report/asset/image/dashboard-icon.png);
 }
 
+/* 대시보드 활성화 */
 .icon-dashboard.active {
     background-image: url(/report/asset/image/dashboard-active-icon.png);
 }
 
+/* 메뉴목록 */
 .icon-menulist {
     background-image: url(/report/asset/image/menulist-icon.png);
 }
 
+/* 메뉴목록 활성화 */
+.icon-menulist.active {
+    background-image: url(/report/asset/image/menulist-active-icon.png);
+}
+
+/* 메뉴생성 */
 .icon-create {
     background-image: url(/report/asset/image/create-icon.png);
 }
 
+/* 메뉴생성 활성화 */
+.icon-create.active {
+    background-image: url(/report/asset/image/create-active-icon.png);
+}
+
+/* footer */
 .footer {
-    box-sizing: border-box;
-    width: 100%;
-    background-color: #aaaaaa;
-    padding: 20px;
+    box-sizing: border-box; /* padding 있음으로 */
+    width: 100%; /* 넓이 채우기 */
+    background-color: #fae1c7; /* footer 색상 */
+    padding: 20px; /* padding */
 }
 
+/* footer section 영역 ( 직계 section ) */
 .footer>section {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    width: 100%; /* 넓이 채우기 */
+    display: flex; /* flex 정렬 */
+    flex-direction: column; /* 세로 정렬 */
+    gap: 16px; /* 간격 16 */
 }
 
+/* footer 섹션 제목 (큰제목) */
 .footer>section>h1 {
-    font-size: 16px;
-    font-weight: bold;
-}
-.footer>section div{
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    font-size: 16px; /* 글씨 사이즈 */
+    font-weight: bold; /* 글씨 두께 */
+    color: #744221; /* 제목 색상 */
+    /* border-bottom: 3px solid rgba(104, 58, 25, 0.3);
+    padding-bottom: 15px;
+    box-sizing: border-box; */
 }
 
-.footer>section div section{
-    display: flex;
-    gap: 10px;
-    align-items: center;
+/* footer 섹션 안 내용물 */
+.footer>section>div{
+    width: 100%; /* 넓이 채우기 */
+    display: flex; /* flex 정렬 */
+    flex-direction: column; /* 세로 정렬 ( 정보들 / 저작권 ) */
 }
 
-.footer>section div h1{
-    font-size: 14px;
-    font-weight: bold;
+/* footer 정보들 section */
+.site-info-section{
+    width: 100%; /* 넓이 채우기 */
+    display: flex; /* flex 정렬 */
+    flex-direction: row; /* 가로 정렬 */
+    justify-content: space-between; /* 양끝 맞추고 알아서 정렬 */
 }
 
-.main_section {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.site-info-section>section {
+    border-left: 1px solid rgba(184, 103, 46, 0.3); /* 왼쪽 밑줄 */
+    padding-left: 15px; /* 밑줄과 컨텐츠 사이 거리 */
+    box-sizing: border-box; /* padding 있음으로 */
 }
 
-.main_section>h1{
-    font-size: 18px;
-    font-weight: bold;
-    font-family: sans-serif;
-    padding: 8px 0;
-    box-sizing: border-box;
-    /* height: 40px; */
+/* footer site-info-section 안에 소제목 */
+.site-info-section h1{
+    font-size: 12px; /* 글씨 크기 */
+    font-weight: bold; /* 글씨 굵기 */
+    color: #4b382b; /* 글씨 색상 */
 }
 
+/* footer 목록과 제목 띄우기 */
+/* dl - 정보, ul - 바로가기 */
+.footer dl, .footer ul{
+    margin-top: 10px; /* 상단 여백 */
+}
+
+/* footer 정보 글씨 크기 지정 */
+.footer dl *, .footer ul li{
+    font-size: 10px; /* 글씨 크기 */
+}
+
+/* 정보 제목 */
+.footer dl dt{
+    font-weight: bold; /* 글씨 굵기 */
+    color:#8C471A; /* 글씨 색상 */
+}
+
+/* 정보 내용 */
+.footer dl dd{
+    font-weight: normal; /* 글씨 굵기 */
+    color:#555555; /* 글씨 색상 */
+}
+
+/* 바로가기 내용 */
+.footer ul li{
+    font-weight: bold; /* 글씨 굵기 */
+    color:#e4803d; /* 글씨 색상 */
+}
+
+/* footer 저작권 내용 */
+.copyright {
+    box-sizing: border-box; /* padding 있음으로 */
+    width: 100%; /* 넓이 채우기 */
+    text-align: center; /* 가운데 정렬 */
+    margin-top: 20px; /* 상단 여백 */
+    border-top: 3px solid rgba(104, 58, 25, 0.3); /* 상단 밑줄 */
+    padding-top: 15px; /* 컨텐츠와 밑줄 사이 패딩 */
+    font-size: 10px; /* 글씨 크기 */
+    color: #202020; /* 글씨 색상 */
+}
 

@@ -1,0 +1,140 @@
+/* create main 설정 */
+.main_section {
+    gap: 24px; /* 사이간격 */
+}
+
+/* form 설정 */
+.create-form {
+    display: flex; /* flex 정렬 */
+    width: 100%; /* 넓이 채우기 */
+    height: 100%; /* 높이 채우기 */
+    gap: 16px; /* 사이 간격 */
+    flex-direction: column; /* 세로정렬 */
+}
+
+/* 폼안의 값 label */
+.create-form>div>label{
+    width: 100%; /* 넓이 채우기 */
+    height: 100%; /* 높이 채우기 */
+    font-size: 12px; /* 글씨 크기 */
+    color: #494949; /* 글씨 색상 */
+}
+
+/* 필수조건 * */
+.create-form>div>label>span {
+    font-size: 12px; /* 글씨 크기 */
+    color: red; /* 글씨 색상 */
+}
+
+/* label 의 select, input, textarea 태그 공통특성 */
+.create-form>div>label>textarea,
+.create-form>div>label>select,
+.create-form>div>label>input {
+    margin-top: 4px; /* 상단 여백 ( 라벨과의 사이 ) */
+    box-sizing: border-box; /* padding 있음으로 */
+    width: 100%; /* 넓이 채우기 */
+    border-radius: 6px; /* 모서리 둥굴게 */
+    border: 1px solid #BABABA; /* 외각선 */
+    padding: 8px 12px; /* padding */
+    height: 40px; /* 높이 지정 */
+}
+
+/* label 의 input태그 file */
+.create-form>div>label>input[type=file]{
+    height: 120px; /* 높이 지정 */
+    border: 1px dashed #BABABA; /* 외각선 점처리 */
+    background-color: #EBEBEB; /* 배경색 */
+    background-image: url(/report/asset/image/inputfile-icon.png);
+}
+
+.create-form>div>label>textarea{
+    height: 100px; /* 높이 지정 */
+    resize: none; /* 사이즈 변환 금지 */
+}
+
+/* checkBox div */
+.checkbox-form {
+    display: flex; /* flex 정렬 */
+    flex-direction: row; /* 가로정렬 */
+    justify-content: space-between; /* 양끝에 붙히기 */
+}
+
+/* Hot Ice 체크박스 */
+.form-is-hot-ice-chkbox {
+    display: flex; /* flex 정렬 */
+    justify-content: space-between; /* 양끝 붙히기 */ 
+    gap: 10px;
+}
+
+.form-chkBox-sellable>label,
+.form-is-hot-ice-chkbox>div>label {
+    height: 100%; /* 높이 채우기 */
+    font-size: 12px; /* 글씨 크기 */
+    color: #494949; /* 글씨 색상 */
+    display: flex; /* flex 정렬 */
+    flex-direction: row; /* 가로정렬 */
+    align-items: center; /* 수평선 정렬 */
+    gap: 5px; /* 사이간격 */
+}
+
+.chkBox-hot,
+.chkBox-ice,
+.chkBox-sellable {
+    display: none;
+ }
+
+.chkBox-sellable+span {
+    width: 48px; /* 높이지정 */
+    height: 24px; /* 넓이지정 */
+    background-image: url(/report/asset/image/btnToggle-icon.png); /* 배경 */
+ }
+
+ .chkBox-sellable:checked+span {
+    width: 48px; /* 높이지정 */
+    height: 24px; /* 넓이지정 */
+    background-image: url(/report/asset/image/btnToggle-active-icon.png); /* 배경 */
+ }
+
+ .chkBox-ice+span,
+ .chkBox-hot+span {
+    width: 24px; /* 높이지정 */
+    height: 24px; /* 넓이지정 */
+    background-image: url(/report/asset/image/radioButton-icon.png); /* 배경 */
+ }
+
+ .chkBox-ice:checked+span,
+ .chkBox-hot:checked+span {
+    width: 24px; /* 높이지정 */
+    height: 24px; /* 넓이지정 */
+    background-image: url(/report/asset/image/radioButton-active-icon.png); /* 배경 */
+ }
+
+/* 페이지 전반적인 버튼 */
+.button-page {
+    display: flex; /* flex 정렬 */
+    flex-direction: column; /* 세로 정렬 */
+    gap: 12px; /* 사이간격 */
+    margin-bottom: 10px; /* 하단 간격 */
+}
+
+/* 버튼 속성 */
+.button-page button {
+    display: block; /* 블럭처리 */
+    width: 100%; /* 넓이 채우기 */
+    height: 40px; /* 높이 지정 */
+    border-radius: 8px; /* 모서리 둥굴게 */
+    font-size: 14px; /* 글씨 크기 */
+    font-weight: bold; /* 글씨 굵기 */
+}
+
+/* 버튼의 첫번째 */
+.button-page button:nth-child(1) {
+   background-color: #B8672E; /* 버튼 색상 */
+   color: #FFFF; /* 글씨 색상 */
+}
+
+/* 버튼의 두번째 */
+.button-page button:nth-child(2) {
+    background-color: #DBDBDB; /* 버튼 색상 */
+    color: #494949; /* 글씨 색상 */
+ }
