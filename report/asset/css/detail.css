@@ -1,0 +1,118 @@
+.menu-image-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 12px;;
+}
+
+.main_section > div > section > h1 {
+    display: none
+}
+
+.main_section, .main_section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.menu-image-1 {
+    width: 190px;
+    height: 190px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/report/asset/image/americano-1.png);
+}
+
+.menu-image-2 {
+    width: 190px;
+    height: 190px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/report/asset/image/americano-2.png);
+}
+
+.hidden-contents {
+    display: none;
+}
+
+.menu-detail dl dd {
+    font-size: 14px;
+    color: #7C7C7C;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.menu-detail dl dt {
+    font-size: 16px;
+    color: #9F8B7C;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.text-margin-bottom{
+    margin-bottom: 24px;
+}
+
+.menu-detail .text-1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #494949;
+}
+
+.menu-detail .text-2 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #9F8B7C;
+}
+
+.menu-detail .text-button {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 8px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.menu-detail .button-1 {
+    background-color: #EBE6E0;
+}
+
+.menu-detail .button-2 {
+    background-color: #B8672E;
+    color: white;
+}
+
+.main_section {
+    height: auto !important; /* height: 100%를 오버라이드 */
+}
+
+.button-section {
+    display: flex !important; /* block 대신 flex 사용 */
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px; /* 위 섹션과 간격 추가 */ 
+    margin-bottom: 48px;
+}
+
+.button-section .button-1 {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #B8672E;
+    color: white;
+}
+
+.button-section .button-2 {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #D92626;
+    color: white;
+}
