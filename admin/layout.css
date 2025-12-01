@@ -79,6 +79,14 @@
 11. 클래스를 잘 정리(...) / 슈도 클래스, 슈도 엘리먼트
 */
 
+:root{
+    --heading-color: #494949;
+    --heading-size-1: 18px;
+    --heading-size-2: 14px; 
+    --heading-size-3: 14px;
+    --heading-weight-1: bold; 
+    --heading-weight-2: normal; 
+}
 html{
     height: 100%;
 }
@@ -138,6 +146,46 @@ main{
     padding:20px;   
     
     position: relative;
+}
+/* .heading{    
+    color: #494949;
+} */
+/* .heading\:1, 
+.heading\:2,
+.heading\:3,
+.heading\:4{
+    color: #494949;
+} */
+.heading\:1{
+    font-size: var(--heading-size-1);
+    font-weight: var(--heading-weight-1);
+    color: var(--heading-color);
+}
+.heading\:2{
+    font-size: var(--heading-size-2);
+    font-weight: var(--heading-weight-2);
+    color: var(--heading-color);
+}
+.heading\:3{
+    font-size: var(--heading-size-3);
+    font-weight: var(--heading-weight-2);
+    color: var(--heading-color);
+}
+
+.n-icon::before{
+    font-family: "Material Symbols Outlined";
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+}
+.icon\:favorite::before{
+    content: "\e87d";
+    color: red;
+}
+.icon\:settings::before{
+    content: "\e8b8";
 }
 .box{
     width: 100px;

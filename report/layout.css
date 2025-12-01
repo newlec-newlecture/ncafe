@@ -1,3 +1,8 @@
+:root{
+    --gray-color-1: #494949;
+    
+}
+
 html{
 
 }
@@ -44,18 +49,25 @@ body{
     
 }
 .link>a{
-    color: #494949;
+    color: var(--gray-color-1);
 }
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 20;
-  color: #494949;
+.n-icon::before{
+    font-family: "Material Symbols Outlined";
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
 }
-
+.icon\:share::before{
+    content: "\e80d";
+    font-size: 24px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20;
+}
 main{
     display: flex;
     flex-direction: column;
@@ -70,7 +82,7 @@ main{
 }
 .chart-sec>h1{
     text-align: center;
-    color: #494949;
+    color: var(--gray-color-1);
     font-weight: bold;
     margin-bottom: 48px;
     padding: 8px 0px;
@@ -82,7 +94,7 @@ main{
 }
 .chart>h1{
     text-align: center;
-    color: #494949;
+    color: var(--gray-color-1);
     font-size: 16px;
     margin-bottom: 16px;
 }
@@ -200,7 +212,7 @@ main{
 .corp>ul>li{
     display: inline-block;
 }
-.corp>ul>li + li:before{
+.corp>ul>li + li::before{
     content: "";
     display: inline-block;
     width: 1px;
