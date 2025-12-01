@@ -266,3 +266,6 @@ main {
     color: #202020; /* 글씨 색상 */
 }
 
+.hidden {
+    display: none;
+}
