@@ -1,19 +1,22 @@
 :root{
+    --main-color-1: #B8672E;
     --gray-color-1: #494949;
-    
+
+    --padding-5: 24px;
+    --padding-6: 48px;
+    --margin-6: 48px;
 }
 
 html{
 
 }
 body{
-    height: inherit;
-    margin: 0;
+
 }
 #root{
-    background-color: gray;
     display: flex;
     flex-direction: column;
+    background-color: #F9F7F5;
 }
 .header{
     display: flex;
@@ -42,26 +45,30 @@ body{
     align-items: center;
     font-size: 16px;
     font-weight: bold;
-    color: #B8672E;
+    color: var(--main-color-1);
 }
 
 .link{
     
 }
 .link>a{
-    color: var(--gray-color-1);
+
 }
 .n-icon::before{
     font-family: "Material Symbols Outlined";
     display: inline-flex;
     width: 24px;
     height: 24px;
+    font-size: 24px;
     justify-content: center;
     align-items: center;
+    color: var(--gray-color-1);
+}
+.n-icon.active::before{
+    color: var(--main-color-1) ;
 }
 .icon\:share::before{
     content: "\e80d";
-    font-size: 24px;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
@@ -72,15 +79,16 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 24px;
-    box-sizing: border-box;
+    padding: var(--padding-6) var(--padding-5);
+    margin: 0 auto;
+    max-width: 440px;
     background-color: #F9F7F5;
 }
 
-.chart-sec{
-    width: 100%;
+.chart-list{
+    /* width: 100%; */
 }
-.chart-sec>h1{
+.chart-list>h1{
     text-align: center;
     color: var(--gray-color-1);
     font-weight: bold;
@@ -99,13 +107,6 @@ main{
     margin-bottom: 16px;
 }
 
-.chart\:1{
-    
-}
-
-.chart\:2{
-    
-}
 .chart>div{
     width: 100%;
     display: flex;
@@ -114,6 +115,13 @@ main{
 }
 .chart>div>img{
     width: 100%;
+}
+.chart\:1{
+    
+}
+
+.chart\:2{
+    
 }
 
 .chart\:2>div>img{
@@ -151,10 +159,23 @@ main{
     width: 100%;
     
 }
+.tool-bar>ul>li>a::before{
+    
+}
+.icon\:dashboard::before{
+    content: "\e9b0";
+}
+.icon\:coffee::before{
+    content: "\e541";
+}
+.icon\:add::before{
+    content: "\e147";
+}
+
 .footer{
     background-color: #fff;
     box-sizing: border-box;
-    padding: 100px 20px;
+    padding: var(--padding-6) var(--padding-5);
     color: #8E6244;
 }
 
@@ -170,7 +191,6 @@ main{
     font-size: 12px;
 }
 .company>h1{
-    font-size: 12px;
     font-weight: bold;
     padding-right: 10px;
     padding-bottom: 10px;
@@ -187,7 +207,6 @@ main{
     float: left;
     border-left: 1px solid #e9e9e9 ;
     padding-left: 10px;
-    max-width: 70%;
 }
 .company>dl>dt{
     color: #b3b3b3;
@@ -195,12 +214,11 @@ main{
 }
 .company>dl>dd{
     padding-left: 1px;
-    box-sizing: border-box;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     color: #585858;
 }
 .corp{
-    margin-top: 20px;
+    margin-top: var(--margin-6);
     padding-top: 20px;
     border-top: 1px solid #e9e9e9;
     text-align: center;
