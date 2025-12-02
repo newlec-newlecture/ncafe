@@ -1,3 +1,4 @@
+@import url('n-icon.css');
 /* == heading == */
 
 :root{
@@ -23,6 +24,12 @@
     --heading-weight-1: bold;
     --heading-weight-2: normal;
 
+    --icon-size-1: 20px;
+    --icon-size-2: 24px;
+    --icon-size-3: 32px;
+    --icon-size-4: 40px;
+
+    
     
 }
 
@@ -55,28 +62,9 @@
     color: var(--heading-color);
 }
 
-.n-icon::before{
-    font-family: "Material Symbols Outlined";
-    /* content: "\e87d";  */
-    display: inline-flex;
-    width: 24px;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-}
 
-.icon\:favorite::before{
-    content: "\e87d"; 
-}
 
-.icon\:favorite-red::before{
-    content: "\e87d"; 
-    color: red;
-}
 
-.icon\:settings::before{
-    content: "\e8b8"; 
-}
 /* 
  1. 더 큰 아이콘이 필요할 때는?
  2. 색이 다른 아이콘을 사용할 때는?

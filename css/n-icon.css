@@ -1,0 +1,87 @@
+.n-icon{    
+    --icon-type: "";
+    --icon-color: var(--color-base-9);
+    --icon-size: var(--icon-size-2);
+    --icon-weight: 400;
+}
+
+.n-icon::before{
+    /* boxing */
+    /* width: 24px;
+    height: 24px; */
+    
+    /* layout */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    /* content */
+    font-family: "Material Symbols Outlined";
+    font-weight: var(--icon-weight);
+    font-size: var(--icon-size);
+    color: var(--icon-color);
+    content: var(--icon-type);
+}
+
+.icon\:favorite::before{
+    --icon-type: "\e87d"; 
+}
+
+.icon\:settings::before{
+    --icon-type: "\e8b8";
+}
+
+.icon-color\:main-1::before{
+    --icon-color: var(--color-main-1);
+}
+
+.icon-color\:main-2::before{
+    --icon-color: var(--color-main-2);
+}
+
+.icon-color\:main-3::before{
+    --icon-color: var(--color-main-3);
+}
+
+.icon-size\:1::before{
+    --icon-size: var(--icon-size-1);
+}
+
+.icon-size\:2::before{
+    --icon-size: var(--icon-size-2);
+}
+
+.icon-size\:3::before{
+    --icon-size: var(--icon-size-3);
+}
+
+.icon-weight\:1::before{
+    --icon-weight: 100;
+}
+
+.icon-weight\:2::before,
+.icon-weight\:light::before{
+    --icon-weight: 200;
+}
+
+.icon-weight\:3::before{
+    --icon-weight: 300;
+}
+
+.icon-weight\:4::before,
+.icon-weight\:normal::before{
+    --icon-weight: 400;
+}
+
+.icon-weight\:5::before{
+    --icon-weight: 500;
+}
+
+.icon-weight\:6::before{
+    --icon-weight: 600;
+}
+
+.icon-weight\:7::before,
+.icon-weight\:bold::before{
+    --icon-weight: 700;
+}   
