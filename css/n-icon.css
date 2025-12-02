@@ -3,6 +3,7 @@
     --icon-color: var(--color-base-9);
     --icon-size: var(--icon-size-2);
     --icon-weight: 400;
+    --icon-fill: 0;
 }
 
 .n-icon::before{
@@ -21,6 +22,7 @@
     font-size: var(--icon-size);
     color: var(--icon-color);
     content: var(--icon-type);
+    font-variation-settings: 'FILL' var(--icon-fill);
 }
 
 .icon\:favorite::before{
@@ -84,4 +86,12 @@
 .icon-weight\:7::before,
 .icon-weight\:bold::before{
     --icon-weight: 700;
-}   
+}
+
+.icon-fill\:0::before{
+    --icon-fill: 0;
+}
+
+.icon-fill\:1::before{
+    --icon-fill: 1;
+}
